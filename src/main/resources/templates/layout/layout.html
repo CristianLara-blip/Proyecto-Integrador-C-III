@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+    <head th:fragment="head">
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/82a228b425.js" crossorigin="anonymous"></script>
+        <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
+    </head>
+    <body>
+        <nav class="navbar navbar-light bg-transparent">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img src="https://i.imgur.com/OiLenCC.png" alt="" width="70" height="70">
+    </a>
+      <a  class="navbar-text" th:href="@{/home}"><img src="https://i.imgur.com/fZTTHsf.png" width="auto" height="70" alt="alt"/></a>
+      
+  </div>
+</nav>
+          <div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Registro Completado</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        Cuenta creada satisfactoriamente
+                                    </div>
+                                    <div class="modal-footer">
+
+                                        <a class="btn btn-success" style="color: white !important; --darkreader-inline-color:#e8e6e3;" th:href="@{/login}" data-darkreader-inline-color=""><i class="fa fa-user"></i>&nbsp;Iniciar Sesion?</a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        <div class="container-fluid" layout:fragment="page-content"></div>
+        
+
+        <script th:src="@{/js/bootstrap.min.js}"></script>
+    </body>
+</html>

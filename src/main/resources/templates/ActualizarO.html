@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/layoutD}">
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
+        <link th:href="@{/css/custom.css}"  rel="stylesheet" />
+    </head>
+    <body>
+        <div class="container-fluid" layout:fragment="page-content">
+
+            <div class="container-fluid">
+                <div class="row ">
+                    <div class="col-12 ">
+                        <div class="card bg-transparent">
+                            <div class="card-header">
+                                <h3 class="card-title">Registro Trámite Interno</h3>
+                            </div>
+                            <div class="card-body" style="color: rgb(0, 0, 0); font-size: small; --darkreader-inline-color:#e8e6e3;" data-darkreader-inline-color="">
+                                <input type="text" id="txt_verificar" hidden="" value="Ciudadano">
+                                <form autocomplete="false" id="form_registro_tramite">
+                                    <div class="row-6">
+                                        
+                                        <div class="col-md-8 mx-auto">
+                                            <div class="card card-danger ">
+                                                <div class="card-header" style="background-color: rgb(51, 122, 183); --darkreader-inline-bgcolor:#296292;" data-darkreader-inline-bgcolor="">
+                                                    <h3 class="card-title"><i class="fas fa-file-alt"></i>&nbsp;<b>Datos del Trámite</b></h3>
+                                                    <div class="card-tools">
+                                                        <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i></button>
+                                                    </div>
+                                                </div>
+                                                <div class="card-body" style="display: block;">
+                                                    <div class="row">
+                                                        <div class="col-md-12 form-group">
+                                                            <label>Tipo Trámite (*):</label>
+                                                            <select class="select2-danger select2 select2-hidden-accessible" name="cmb_tipodocumento" data-dropdown-css-class="select2-danger" id="cmb_tipodocumento" style="width: 100%;" data-select2-id="cmb_tipodocumento" tabindex="-1" aria-hidden="true"><option value="1" data-select2-id="9">SOLICITUD DE ACTUALIZACION RUOS</option></select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="3" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-cmb_tipodocumento-container"><span class="select2-selection__rendered" id="select2-cmb_tipodocumento-container" role="textbox" aria-readonly="true" title="SOLICITUD DE REGISTRO RUOS">SOLICITUD DE REGISTRO RUOS</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                                        </div>
+                                                        <div class="col-md-12 row">
+                                                            <div class="col-md-12"><label style="font-size: small;">REQUISITOS:</label></div>
+                                                            <div class="col-md-1"></div>
+                                                            <div class="col-md-10 form-group">
+                                                                <div style="text-align: left; font-size: small; font-weight: bold; color: rgb(51, 122, 183); font-family: monospace; --darkreader-inline-color:#69a6d5;" id="div_requisitos" data-darkreader-inline-color=""><table style="width:100%"><tbody><tr><td style="width: 50%; border: 0px solid black; padding-left: 10px; padding-right: 10px; --darkreader-inline-border-top:#8c8273; --darkreader-inline-border-right:#8c8273; --darkreader-inline-border-bottom:#8c8273; --darkreader-inline-border-left:#8c8273;" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left=""><b style="color: black; font-size: 18px; --darkreader-inline-color:#e8e6e3;" data-darkreader-inline-color=""> - </b> ACTA DE RECONOCIMIENTO<br></td></tr></tbody></table></div>
+                                                            </div>
+                                                            <div class="col-md-1"></div>
+                                                        </div>
+                                                        <div class="col-md-6 form-group" hidden="">
+                                                            <label>Nº Documento (*):</label>
+                                                            <input type="text" value="" class="form-control" onkeypress="return soloNroDocumento(event)" id="txt_nrodocumentos" maxlength="20" name="txt_nrodocumentos" placeholder="Ingrese nro del documento">
+                                                        </div>
+
+                                                        <div class="col-md-12 form-group">
+                                                            <label>Asunto del Trámite (*):</label>
+                                                            <textarea rows="2" name="txt_asunto" id="txt_asunto" onkeypress="return soloLetras(event)" class="form-control" style="resize: none" maxlength="255" placeholder="Asunto del documento"></textarea>
+                                                        </div>
+                                                        <div class="col-md-10 form-group">
+                                                            <label for="txt_archivo">Adjuntar documento (pdf,docx,zip,jpg,png,rar,xlsx)(Adjuntar en un solo archivo todos los requisitos):</label>
+                                                            <div class="input-group">
+                                                                <div class="custom-file">
+                                                                    <input type="file" accept=".pdf,.PDF,.docx,.zip,.jpg,.png,.jpeg,.rar,.xls,.xlsx" class="custom-file-input form-control" id="txt_archivo" name="txt_archivo">
+                                                                    <label class="custom-file-label" id="lb_archivo" for="txt_archivo">Seleccionar Archivo</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-2 form-group"><br>
+                                                            <label>Nº Folios:</label>
+                                                            <input type="text" class="form-control" onkeypress="return soloNumeros(event)" id="txt_folios" maxlength="3" name="txt_folios" placeholder="Ingrese nro de hojas">
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <div class="form-group clearfix">
+                                                                <div class="icheck-warning d-inline" style="">
+                                                                    <input type="checkbox" onclick="opcion_verificar()" id="checkaceptar">
+                                                                    <label for="checkaceptar" style="text-align: justify;">
+                                                                        Declaro bajo penalidad de perjurio, que toda la información proporcionada es correcta y verídica.
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-12 form-group" style="text-align: left; font-weight: bold; color: rgb(155, 0, 0); --darkreader-inline-color:#ff6060;" data-darkreader-inline-color="">
+                                                            Campos Obligatorios (*)
+                                                        </div>
+                                                        <div class="col-md-12 fom-group">
+                                                            <input type="text" name="postID" hidden="" id="postID">
+                                                            <input type="text" style="display: none;" id="txtformato" name="txtformato">
+                                                            <a style="cursor: pointer; color: white !important; background-color: rgb(51, 122, 183) !important; --darkreader-inline-color:#e8e6e3; --darkreader-inline-bgcolor:#296292;" type="button" class="btn btn-block btn-success disabled" id="btn_subir" onclick="registrar_tramite();" data-darkreader-inline-color="" data-darkreader-inline-bgcolor="">&nbsp;Enviar Trámite</a>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+    </body>
+</html>

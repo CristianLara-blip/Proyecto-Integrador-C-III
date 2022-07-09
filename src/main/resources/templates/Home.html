@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/layout}">
+    <head>
+        <link  rel="icon" href="https://i.imgur.com/XDTf7HV.png">
+        <title>Registro de organizaciones sociales</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
+        <link th:href="@{/css/custom.css}"  rel="stylesheet" />
+    </head>
+    <body>
+
+
+
+
+        <div class="contenedor" layout:fragment="page-content">
+
+            <div class="position-relative">    
+                <img src="https://i.imgur.com/txlD4rV.jpg" alt="alt"/>
+                <div class="centrado">
+                    <h1 class="h1 text-light">Plataforma virtual de organizaciones sociales</h1>
+
+
+                    <a th:href="@{/login}" role="button" class="btn btn-success">Ingresar</a>
+                    <a th:href="@{/lista/all}" role="button" class="btn btn-success">Ver lista de organizaciones</a>
+
+
+
+                </div>
+            </div>  
+            <div class="row bg-dark ">
+                <div class="col-2"></div>
+                <div class="col-3 ">
+                    <img src="http://www.ruos.munlima.gob.pe/assets/images/joven.png" alt="alt"/>
+
+                </div>
+
+
+                <div class="col-5 text-light "> 
+                    <div class="h2 mt-5 ">¿QUÉ ES EL RUOS ?</div>
+                    <p class="text-secondary ">Registro de organizaciones sociales y vecinales
+
+                        Es un documento que contiene la base de datos estructurada de las organizaciones sociales y vecinales del territorio donde ejerce competencias el respectivo gobierno local.</p>
+
+                    <a th:href="@{/login}" role="button" class="btn btn-success mt-5">Ingresar</a>
+                    <a th:href="@{/lista/all}" role="button" class="btn btn-success mt-5">Ver lista de organizaciones</a>
+                </div>
+
+                <div class="col-2"></div>
+                <div class="row mb-5">
+                    <div class="col-4"></div>
+                    <div class="col-2 mt-5 ">
+                        <div class="card bg" style="width: 18rem;">
+                            <img src="https://i.imgur.com/HO382zD.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Modelos de formatos</h5>
+                                <p class="card-text">Revise aqui los diferentes modelos de solicitudes</p>
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                                    Ver modelos
+                                </button>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="col-2 mt-5 "><div class="card bg" style="width: 18rem;">
+                            <img src="https://i.imgur.com/timjArO.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Requisitos de solicitud</h5>
+                                <p class="card-text">Revise aqui los diferentes requisitos necesarios para la solicitudes</p>
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal3">
+                                    Ver requisitos
+                                </button>
+                            </div>
+                        </div></div>
+                    <div class="col-4"></div>
+
+                </div>
+
+
+            </div>
+            <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content ">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Requisitos para la inscripción</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <ul title="Requisitos para la inscripción" class="text-start list-group">
+                                <li class="list-group-item">Solicitud de inscripción en el registro.</li>
+                                <li class="list-group-item">Acta de fundación o constitución.
+                                </li>
+                                <li class="list-group-item">Estatuto de la organización, así como el acta de aprobación.
+                                </li>
+                                <li class="list-group-item">Padrón de miembros de la organización.
+</li>
+<li class="list-group-item">Nómina de elección de órgano directivo de la organización.
+</li>
+                            </ul>
+
+                        </div>
+                        <div class="modal-footer">
+
+                            <a class="btn-danger btn"  type="submit" value="" href="https://www.gob.pe/12289-inscribir-las-organizaciones-sociales-y-vecinales-en-el-registro-municipal" >Ver requisitos completos </a> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-xl">
+                    <div class="modal-content ">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Modelos de formatos</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">NOMBRE DEL FORMATO</th>
+                                        <th scope="col">MODELO DE FORMATO</th>
+                                        <th scope="col">MODELO PARA LLENAR</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="table-group-divider">
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>SOLICITUD PARA REGISTRO NUEVO DE ORGANIZACIÓN</td>
+                                        <td>Otto</td>
+                                        <td><a th:href="@{\pdfs\MODELO_SOLICITUD_NUEVO_GPV.pdf}" download="MODELO_SOLICITUD"><i class="fa-solid fa-file-pdf"></i></a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>SOLICITUD PARA ACTUALIZACIÓN DE ORGANIZACIÓN</td>
+                                        <td>Thornton</td>
+                                        <td ><a th:href="@{\pdfs\MODELO_SOLICITUD_ACTUALIZACION_GPV.pdf}" download="MODELO_ACTUALIZACION"><i  class="fa-solid fa-file-pdf "></i></a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td >NÓMINA DE LOS MIEMBROS DEL ÓRGANO DIRECTIVO</td>
+                                        <td>@twitter</td>
+                                        <td><a th:href="@{\pdfs\MODELO_NOMINA_JUNTA_DIRECTIVA.pdf}" download="MODELO_NOMINA_JUNTA_DIRECTIVA"><i class="fa-solid fa-file-pdf"></i></a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="modal-footer">
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <script th:src="@{/js/bootstrap.min.js}"></script>
+    </body>
+</html>

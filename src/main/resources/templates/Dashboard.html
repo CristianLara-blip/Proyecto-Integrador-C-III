@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/layoutD}">
+    <head >
+        <title>Dashboard</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
+        <link th:href="@{/css/custom.css}"  rel="stylesheet" />
+
+    </head>
+    <body>
+        <div class="container-fluid" layout:fragment="page-content">
+
+            <div class="container row bg-transparent centrado text-light">
+                <div class="col-6 my-5 ">
+                    <div class="card text-center bg-dark">
+                        <div class="card-header">
+                            Registro
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Registra tu organizacion social</h5>
+                            <p class="card-text"></p>
+                            <img src="https://i.imgur.com/5Mqjaha.png" alt="alt"/>
+                            
+                        </div>
+                        <div class="card-footer text-muted">
+                          <a th:href="@{/dashboard/registraro}" class="btn btn-success mb-4">Go somewhere</a>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="col-6  my-5">
+                    <div class="card text-center  bg-dark ">
+                        <div class="card-header">
+                            Actualizacion
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Actuliza los datos de tu organizacion social</h5>
+                            <p class="card-text"></p>
+                            <img src="https://i.imgur.com/xHl0Kib.png" width="256px" height="256px"alt="alt"/>
+                        </div>
+                        <div class="card-footer text-muted ">
+                             <a th:href="@{/dashboard/actualizaro}" class="btn btn-success mb-4" >Go somewhere</a>
+                        </div>
+                    </div></div>
+
+
+            </div>
+
+
+        </div>
+        <script th:src="@{/js/bootstrap.min.js}"></script>
+    </body>
+</html>

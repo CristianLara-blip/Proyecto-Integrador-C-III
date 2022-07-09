@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/layout}">
+    <head >
+        <link  rel="icon" href="https://i.imgur.com/XDTf7HV.png">
+        <title>Lista de organizaciones sociales</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
+        <link th:href="@{/css/custom.css}"  rel="stylesheet" />
+        <link rel="stylesheet" href="menu.html">
+
+    </head>
+    <body >
+        <div class="container-fluid" layout:fragment="page-content">
+            <div class="container position-relative ">
+      
+
+                <div class="container-fluid rounded-3 row bg-light  ">
+
+
+                    <div class="col-10 mt-3">
+                    <h2>Lista de Organizaciones Sociales</h2>
+                   
+                 
+                </a>
+                     <table class="table mb-5 ">
+                <thead>
+                    <tr>
+                   
+                        <th scope="col">ID</th>
+                        <th scope="col">NOMBRE</th>
+                        <th scope="col">Direccion</th>
+                     
+                    </tr>
+                </thead>
+                   <tbody>
+                    <tr th:each="org :${organizaciones}">
+                        
+                        <td th:text="${org.id}"></td>
+                        <td th:text="${org.nombre}"></td>
+                        <td th:text="${org.direccion}"></td>
+                        <td>
+                      
+                        </td>
+                    </tr>                    
+                </tbody>
+                </table>
+                </div>
+                       <div class="col-2 d-grid gap-2 h-50 mt-5" >  
+                           <a th:href="@{/lista/exportarPDF}" class="btn  btn-danger " type="button">Exportar PDF</a>
+                        <a th:href="@{/lista/exportarExcel}" class="btn  btn-success " type="button">Exportar Excel</a></div>
+                       
+                </div>
+            
+                
+                
+                
+                
+                
+            </div>
+            <script th:src="@{/js/bootstrap.min.js}"></script>
+    </body>
+</html>
