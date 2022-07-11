@@ -10,7 +10,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-         <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
+        <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
     </head>
     <body>
         <div class="container-fluid" layout:fragment="page-content">  
@@ -18,7 +18,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
             <nav class=" navbar navbar-expand navbar-light " style=" background: #0BD10B">
                 <div class="container-fluid"> 
                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Escudo_de_Chaclacayo.png/628px-Escudo_de_Chaclacayo.png" alt="alt" style="margin-left: 30px ; width: 80px"/>
-                                        <img th:src="@{/images/logo.png}" alt="alt"  width="80" height="62" style="margin-left: -59%"/>
+                    <img th:src="@{/images/logo.png}" alt="alt"  width="80" height="62" style="margin-left: -59%"/>
 
                     <div class="row">
                         <div class="col bg-white rounded-circle p-3">
@@ -75,30 +75,117 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                             <th class="text-center">ESTADO</th>
                         </tr>
                     </thead>
+                    
+                     <style>
+                        #prueba{
+                            display: none;
+                        }
+                        
+                        #prueba2{
+                            display: none;
+                        }
+                        #prueba3{
+                            display: none;
+                        }
+                        
+                        #prueba4{
+                            display: none;
+                        }
+                        #prueba5{
+                            display: none;
+                        }
+                        
+                        #prueba6{
+                            display: none;
+                        }
+                        
+                        
+                    </style>
+
+                    <script>
+                        function mostrarprueba() {
+                            document.getElementById('prueba').style.display = 'block';
+                             document.getElementById('prueba2').style.display = 'none';
+                        }
+                        
+                        function mostrarprueba2() {
+                            document.getElementById('prueba2').style.display = 'block';
+                             document.getElementById('prueba').style.display = 'none';
+
+                        }
+                         function mostrarprueba3() {
+                            document.getElementById('prueba3').style.display = 'block';
+                             document.getElementById('prueba4').style.display = 'none';
+                        }
+                        
+                        function mostrarprueba4() {
+                            document.getElementById('prueba4').style.display = 'block';
+                             document.getElementById('prueba3').style.display = 'none';
+
+                        }
+                        
+                        
+                         function mostrarprueba5() {
+                            document.getElementById('prueba5').style.display = 'block';
+                             document.getElementById('prueba6').style.display = 'none';
+                        }
+                        
+                        function mostrarprueba6() {
+                            document.getElementById('prueba6').style.display = 'block';
+                             document.getElementById('prueba5').style.display = 'none';
+
+                        }
+                    </script>
+                    
+                    
+                    
+                    
+                    
+                    
                     <tbody>
                         <tr>
                             <td class="text-center col-4">Organización Vaso de Leche</td>
                             <td class="text-center col-2">01/02/2022</td>
                             <td class="text-center col-1">  <a th:href="@{/images/informe.pdf}" download="Informe Técnico.pdf">  <img src="https://www.mintur.gob.cu/wp-content/uploads/2022/04/icono-del-vector-de-descarga-archivo-pdf-documento-descargar-en-fondo-blanco-193233210.jpg" alt="alt" width="35"/>  </a> </td>
-                            <td class="text-center col-1"><a href=""class=" btn px-3 text-white" style="background: #0BD10B">Ver</a></td>
+                            <td class="text-center col-1"><button class=" btn px-3 text-white" data-bs-toggle="modal" data-bs-target="#staticBackdrop"  style="background: #0BD10B" >Ver</button>
+                            </td>
+
+
                             <td class="text-center col-2"><a th:href="@{/images/resolucion.pdf}" download="Resolución.pdf" class=" btn px-3 text-white" style="background: #0BD10B">Generar</a></td>
-                            <td class="col-1"><div class="ms-4 rounded-circle notifi2 bg-success"></div></td>
-                        </tr>
+                            <td class="col-1"><div  id="prueba">
+                                    <center> <img src="https://illustoon.com/photo/7273.png" alt="alt" width="35"/> </center>
+                                </div>
+                                <div  id="prueba2">
+                                    <center> <img src="https://images.emojiterra.com/google/android-11/512px/1f534.png" alt="alt" width="35"/> </center>
+                                </div>
+
+                            </td>                        </tr>
                         <tr>
                             <td class="text-center col-4">Organización Mujeres al Poder</td>
                             <td class="text-center col-2">01/02/2022</td>
                             <td class="text-center col-1">  <a th:href="@{/images/informe.pdf}" download="Informe Técnico.pdf">  <img src="https://www.mintur.gob.cu/wp-content/uploads/2022/04/icono-del-vector-de-descarga-archivo-pdf-documento-descargar-en-fondo-blanco-193233210.jpg" alt="alt" width="35"/>  </a> </td>
-                            <td class="text-center col-1"><a href=""  class=" btn px-3 text-white" style="background: #0BD10B">Ver</a></td>
-                            <td class="text-center col-2"><a th:href="@{/images/resolucion.pdf}" download="Resolución.pdf" class=" btn px-3 text-white" style="background: #0BD10B">Generar</a></td>
-                            <td class="col-1"><div class="ms-4 rounded-circle notifi2 bg-success"></div></td>
-                        </tr>    
+                            <td class="text-center col-1"><button class=" btn px-3 text-white" data-bs-toggle="modal" data-bs-target="#staticBackdrop2"  style="background: #0BD10B" >Ver</button>
+                            </td>                            <td class="text-center col-2"><a th:href="@{/images/resolucion.pdf}" download="Resolución.pdf" class=" btn px-3 text-white" style="background: #0BD10B">Generar</a></td>
+                            <td class="col-1"><div  id="prueba3">
+                                    <center> <img src="https://illustoon.com/photo/7273.png" alt="alt" width="35"/> </center>
+                                </div>
+                                <div  id="prueba4">
+                                    <center> <img src="https://images.emojiterra.com/google/android-11/512px/1f534.png" alt="alt" width="35"/> </center>
+                                </div>            </tr>    
                         <tr>
                             <td class="text-center col-4">Organización Progreso Juvenil</td>
                             <td class="text-center col-2">01/02/2022</td>
                             <td class="text-center col-1">  <a th:href="@{/images/informe.pdf}" download="Informe Técnico.pdf">  <img src="https://www.mintur.gob.cu/wp-content/uploads/2022/04/icono-del-vector-de-descarga-archivo-pdf-documento-descargar-en-fondo-blanco-193233210.jpg" alt="alt" width="35"/>  </a> </td>
-                            <td class="text-center col-1"><a href=""  class=" btn px-3 text-white" style="background: #0BD10B">Ver</a></td>
+                            <td class="text-center col-1"><button class=" btn px-3 text-white" data-bs-toggle="modal" data-bs-target="#staticBackdrop3"  style="background: #0BD10B" >Ver</button>
                             <td class="text-center col-2"><a th:href="@{/images/resolucion.pdf}" download="Resolución.pdf" class=" btn px-3 text-white" style="background: #0BD10B">Generar</a></td>
-                            <td class="col-1"><div class="ms-4 rounded-circle notifi2 bg-success"></div></td>
+                            <td class="col-1"><div  id="prueba5">
+                                    <center> <img src="https://illustoon.com/photo/7273.png" alt="alt" width="35"/> </center>
+                                </div>
+                                <div  id="prueba6">
+                                    <center> <img src="https://images.emojiterra.com/google/android-11/512px/1f534.png" alt="alt" width="35"/> </center>
+                                </div>
+
+                            </td>    
                         </tr>
 
                     </tbody>
@@ -106,10 +193,887 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
             </div>
             <footer class="mt-5 p-4 color1 d-flex" style=" background: #0BD10B">
                 <h3 class="text-white justify-content-end w-50" style="margin-left: 28em">Municipalidad de Chaclacayo</h3>
-            </footer></div>
-        <script th:src="@{/js/bootstrap.min.js}"></script>
-        <script th:src="@{/js/jquery.js}"></script>
+            </footer>
 
 
-    </body>
+            <div  class="modal fade"  id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog" >
+                    <div style="width: 70em; margin-left: -19em" class=" modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel"></h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container">
+                                <div class="row justify-content-md-center">
+                                    <div class="p-4 text-lg-center rounded-pill mt-4 w-auto ps-5 pe-5" style="background-color:#FFFF00">
+                                        <h3>REGISTRA TÚ ORGANIZACIÓN SOCIAL</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ms-5 mt-4">
+                                <div class="p-3 text-lg-center rounded-pill mt-4"  style="background-color:#FFFF00;width: 23%; height: 70px">
+                                    <h3 class="fw-normal">ORGANIZACIÓN:</h3>
+                                </div>
+                            </div><br><br><br><br>
+                            <center><div class="container" style="border: 2px solid black; border-radius: 50px; width: 40%" >
+
+                                    <img th:src="@{/images/org.png}" alt="alt" width="350em" />
+
+                                </div></center><br><br><br><br>
+                            <div class="mx-5 mt-4">
+                                <div class="d-grid">
+                                    <div class="row">
+                                        <h3 class="col">Nombre de la Organización:</h3>
+                                        <h3 class="col">&nbsp&nbsp&nbsp&nbsp&nbspTipo de Organización:</h3>
+
+                                    </div>
+                                    <div class="row">
+                                        <input type="text" class="col form-control" id="exampleFormControlInput1" placeholder="">
+                                        <div class="col-1"> </div>
+                                        <input type="text" class="col form-control" id="exampleFormControlInput1" placeholder="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mx-5 mt-4">
+                                <div class="d-grid">
+                                    <div class="row">
+                                        <h3 class="col ">Código de Organización:</h3>
+                                        <h3 class="col ">&nbsp&nbsp&nbsp&nbsp&nbspZona:</h3>
+                                    </div>
+                                    <div class="row">
+                                        <input type="text" class="col form-control" id="exampleFormControlInput1" placeholder="">
+                                        <div class="col-1"> </div>
+                                        <input type="text" class="col form-control" id="exampleFormControlInput1" placeholder="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mx-5 mt-4">
+                                <div class="d-grid">
+                                    <div class="row">
+                                        <h3 class="col ">Nivel:</h3>
+                                        <h3 class="col ">&nbsp&nbsp&nbsp&nbsp&nbspN° de Resolución:</h3>
+                                    </div>
+                                    <div class="row">
+                                        <input type="text" class="col form-control" id="exampleFormControlInput1" placeholder="">
+                                        <div class="col-1"> </div>
+                                        <input type="text" class="col form-control" id="exampleFormControlInput1" placeholder="">
+                                    </div>
+                                </div>
+                            </div><div class="mx-5 mt-4">
+                                <div class="d-grid">
+                                    <div class="row">
+                                        <h3 class="col">Inicio de Vigencia:</h3>
+                                        <h3 class="col">&nbsp&nbsp&nbsp&nbsp&nbspFin de Vigencia:</h3>
+                                    </div>
+                                    <div class="row">
+                                        <input type="text" class="col form-control" id="exampleFormControlInput1" placeholder="">
+                                        <div class="col-1"> </div>
+                                        <input type="text" class="col form-control" id="exampleFormControlInput1" placeholder="">
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="ms-5 mt-5">
+                                <div class="p-3 text-lg-center rounded-pill mt-4"style="background-color:#FFFF00;width: 45%; height: 70px">
+                                    <h3 class="fw-normal">NÓMINA DE LA JUNTA DIRECTIVA:</h3>
+                                </div>
+                            </div>
+                            <div class="text-center mt-5">
+                                <h3>FECHA DE VIGENCIA</h3>
+                            </div>
+                            <div class="mx-5 mt-4">
+                                <div class="d-grid">
+                                    <div class="row">
+                                        <h3 class="col ">Inicio de Vigencia:</h3>
+                                        <h3 class="col ">&nbsp&nbsp&nbsp&nbsp&nbspFin de Vigencia:</h3>
+                                    </div>
+                                    <div class="row">
+                                        <input type="text" class="col form-control" id="exampleFormControlInput1" placeholder="">
+                                        <div class="col-1"> </div>
+                                        <input type="text" class="col form-control" id="exampleFormControlInput1" placeholder="">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="container mt-5">
+                                <table border="1" class="table table-bordered border-dark">
+                                    <thead>
+                                        <tr>
+                                            <th class="col-2">CARGO</th>
+                                            <th class="col-3">NOMBRES</th>
+                                            <th class="col-3">APELLIDOS</th>
+                                            <th class="col-2">DIRECCIÓN</th>
+                                            <th class="col-1">DNI</th>
+                                            <th class="col-1">OPCIONES</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Presidente(a)</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td><a href="url"><img src="src" alt="alt"/></a><a href="url"><img src="src" alt="alt"/></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Vice Presidente(a)</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td><a href="url"><img src="src" alt="alt"/></a><a href="url"><img src="src" alt="alt"/></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Secretario(a)</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td><a href="url"><img src="src" alt="alt"/></a><a href="url"><img src="src" alt="alt"/></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Tesorero(a)</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td><a href="url"><img src="src" alt="alt"/></a><a href="url"><img src="src" alt="alt"/></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Vocal 1</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td><a href="url"><img src="src" alt="alt"/></a><a href="url"><img src="src" alt="alt"/></a></td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="ms-5 mt-5">
+                                <div class="p-3 text-lg-center rounded-pill mt-4" style="background-color:#FFFF00;width: 25%; height: 70px">
+                                    <h3 class="fw-normal">NÓMINA DE SOCIOS:</h3>
+                                </div>
+                            </div>
+                            <div class="container mt-5">
+                                <center> <div class="mt-5 mb-3 col">
+                                        <button class="col-auto btn"  style="background: #0BD10B; color: white">&nbsp&nbsp&nbspAgregar Socio&nbsp&nbsp&nbsp</button>
+                                    </div> </center>
+                                <table border="1" class="table table-bordered border-dark">
+                                    <thead>
+                                        <tr>
+                                            <th class="col-2">N° SOCIOS</th>
+                                            <th class="col-3">NOMBRES</th>
+                                            <th class="col-3">APELLIDOS</th>
+                                            <th class="col-2">DDIRECCIÓN</th>
+                                            <th class="col-1">DNI</th>
+                                            <th class="col-1">OPCIONES</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Socio-01</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Socio-02</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Socio-03</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Socio-04</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Socio-05</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Socio-06</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="ms-5 mt-5">
+                                <div class="p-3 text-lg-center rounded-pill mt-4" style="background-color:#FFFF00;width: 25%; height: 70px">
+                                    <h3 class="fw-normal">DOCUMENTOS:</h3>
+                                </div>
+                            </div>
+                            <div class="container mt-5">
+                                <div class="row justify-content-md-center">
+                                    <div class="p-3 text-lg-center rounded-pill mt-4 w-auto ps-4 pe-4"  style="background-color:#FFFF00;width: 25%; height: 60px">
+                                        <h4 class="fw-normal">ACTA DE ELECCIÓN DEL ÓRGANO DIRECTIVO</h4>
+                                    </div>                
+                                </div>      
+                                <center><div class="archivoc mt-2">
+                                        <input type="file" name="archivo" id="">
+                                    </div> </center>
+                            </div>
+                            <div class="container mt-5">
+                                <div class="row justify-content-md-center">
+                                    <div class="p-3 text-lg-center rounded-pill mt-4 w-auto ps-4 pe-4"  style="background-color:#FFFF00;width: 25%; height: 60px">
+                                        <h4 class="fw-normal">ESTUDIO Y ACTA DE APROBACIÓN</h4>
+                                    </div>                
+                                </div>
+                                <center><div class="archivoc mt-2">
+                                        <input type="file" name="archivo" id="">
+                                    </div> </center>
+                            </div>
+                            <div class="container mt-5">
+                                <div class="row justify-content-md-center">
+                                    <div class="p-3 text-lg-center rounded-pill mt-4 w-auto ps-4 pe-4"  style="background-color:#FFFF00;width: 25%; height: 60px">
+                                        <h4 class="fw-normal">ACTA DE FUNCIÓN O DE CONTSITUCIÓN</h4>
+                                    </div>                
+                                </div>
+                                <center><div class="archivoc mt-2">
+                                        <input type="file" name="archivo" id="">
+                                    </div> </center>
+                            </div>
+                            <div class="container mt-5">
+                                <div class="row justify-content-md-center">
+                                    <div class="p-3 text-lg-center rounded-pill mt-4 w-auto ps-4 pe-4"  style="background-color:#FFFF00;width: 25%; height: 60px">
+                                        <h4 class="fw-normal">PLANO DE ACCIÓN DE LA CONSTITUCIÓN</h4>
+                                    </div>                
+                                </div>
+                                <center><div class="archivoc mt-2">
+                                        <input type="file" name="archivo" id="">
+                                    </div> </center>
+                            </div><br><br>
+                            <center> <div class="w-50"><div class="row container mt-3">
+                                        <div class="col d-grid  mx-auto  ">                     
+                                            <button onclick="mostrarprueba2();" data-bs-dismiss="modal" class=" btn px-3 text-white" style="background: red" >RECHAZAR</button>                                        </div>
+
+                                        <div class="col d-grid  mx-auto  ">                       
+                                            <button onclick="mostrarprueba();" data-bs-dismiss="modal" class=" btn px-3 text-white" style="background: #0BD10B" >ACEPTAR</button>                                        </div>
+                                    </div></div> </div></center>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div  class="modal fade"  id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog" >
+                    <div style="width: 70em; margin-left: -19em" class=" modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel"></h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container">
+                                <div class="row justify-content-md-center">
+                                    <div class="p-4 text-lg-center rounded-pill mt-4 w-auto ps-5 pe-5" style="background-color:#FFFF00">
+                                        <h3>REGISTRA TÚ ORGANIZACIÓN SOCIAL</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ms-5 mt-4">
+                                <div class="p-3 text-lg-center rounded-pill mt-4"  style="background-color:#FFFF00;width: 23%; height: 70px">
+                                    <h3 class="fw-normal">ORGANIZACIÓN:</h3>
+                                </div>
+                            </div><br><br><br><br>
+                            <center><div class="container" style="border: 2px solid black; border-radius: 50px; width: 40%" >
+
+                                    <img th:src="@{/images/org.png}" alt="alt" width="350em" />
+
+                                </div></center><br><br><br><br>
+                            <div class="mx-5 mt-4">
+                                <div class="d-grid">
+                                    <div class="row">
+                                        <h3 class="col">Nombre de la Organización:</h3>
+                                        <h3 class="col">&nbsp&nbsp&nbsp&nbsp&nbspTipo de Organización:</h3>
+
+                                    </div>
+                                    <div class="row">
+                                        <input type="text" class="col form-control" id="exampleFormControlInput1" placeholder="">
+                                        <div class="col-1"> </div>
+                                        <input type="text" class="col form-control" id="exampleFormControlInput1" placeholder="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mx-5 mt-4">
+                                <div class="d-grid">
+                                    <div class="row">
+                                        <h3 class="col ">Código de Organización:</h3>
+                                        <h3 class="col ">&nbsp&nbsp&nbsp&nbsp&nbspZona:</h3>
+                                    </div>
+                                    <div class="row">
+                                        <input type="text" class="col form-control" id="exampleFormControlInput1" placeholder="">
+                                        <div class="col-1"> </div>
+                                        <input type="text" class="col form-control" id="exampleFormControlInput1" placeholder="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mx-5 mt-4">
+                                <div class="d-grid">
+                                    <div class="row">
+                                        <h3 class="col ">Nivel:</h3>
+                                        <h3 class="col ">&nbsp&nbsp&nbsp&nbsp&nbspN° de Resolución:</h3>
+                                    </div>
+                                    <div class="row">
+                                        <input type="text" class="col form-control" id="exampleFormControlInput1" placeholder="">
+                                        <div class="col-1"> </div>
+                                        <input type="text" class="col form-control" id="exampleFormControlInput1" placeholder="">
+                                    </div>
+                                </div>
+                            </div><div class="mx-5 mt-4">
+                                <div class="d-grid">
+                                    <div class="row">
+                                        <h3 class="col">Inicio de Vigencia:</h3>
+                                        <h3 class="col">&nbsp&nbsp&nbsp&nbsp&nbspFin de Vigencia:</h3>
+                                    </div>
+                                    <div class="row">
+                                        <input type="text" class="col form-control" id="exampleFormControlInput1" placeholder="">
+                                        <div class="col-1"> </div>
+                                        <input type="text" class="col form-control" id="exampleFormControlInput1" placeholder="">
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="ms-5 mt-5">
+                                <div class="p-3 text-lg-center rounded-pill mt-4"style="background-color:#FFFF00;width: 45%; height: 70px">
+                                    <h3 class="fw-normal">NÓMINA DE LA JUNTA DIRECTIVA:</h3>
+                                </div>
+                            </div>
+                            <div class="text-center mt-5">
+                                <h3>FECHA DE VIGENCIA</h3>
+                            </div>
+                            <div class="mx-5 mt-4">
+                                <div class="d-grid">
+                                    <div class="row">
+                                        <h3 class="col ">Inicio de Vigencia:</h3>
+                                        <h3 class="col ">&nbsp&nbsp&nbsp&nbsp&nbspFin de Vigencia:</h3>
+                                    </div>
+                                    <div class="row">
+                                        <input type="text" class="col form-control" id="exampleFormControlInput1" placeholder="">
+                                        <div class="col-1"> </div>
+                                        <input type="text" class="col form-control" id="exampleFormControlInput1" placeholder="">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="container mt-5">
+                                <table border="1" class="table table-bordered border-dark">
+                                    <thead>
+                                        <tr>
+                                            <th class="col-2">CARGO</th>
+                                            <th class="col-3">NOMBRES</th>
+                                            <th class="col-3">APELLIDOS</th>
+                                            <th class="col-2">DIRECCIÓN</th>
+                                            <th class="col-1">DNI</th>
+                                            <th class="col-1">OPCIONES</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Presidente(a)</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Vice Presidente(a)</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Secretario(a)</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Tesorero(a)</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Vocal 1</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="ms-5 mt-5">
+                                <div class="p-3 text-lg-center rounded-pill mt-4" style="background-color:#FFFF00;width: 25%; height: 70px">
+                                    <h3 class="fw-normal">NÓMINA DE SOCIOS:</h3>
+                                </div>
+                            </div>
+                            <div class="container mt-5">
+                                <center> <div class="mt-5 mb-3 col">
+                                        <button class="col-auto btn"  style="background: #0BD10B; color: white">&nbsp&nbsp&nbspAgregar Socio&nbsp&nbsp&nbsp</button>
+                                    </div> </center>
+                                <table border="1" class="table table-bordered border-dark">
+                                    <thead>
+                                        <tr>
+                                            <th class="col-2">N° SOCIOS</th>
+                                            <th class="col-3">NOMBRES</th>
+                                            <th class="col-3">APELLIDOS</th>
+                                            <th class="col-2">DDIRECCIÓN</th>
+                                            <th class="col-1">DNI</th>
+                                            <th class="col-1">OPCIONES</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Socio-01</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Socio-02</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Socio-03</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Socio-04</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>Socio-05</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Socio-06</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="ms-5 mt-5">
+                                <div class="p-3 text-lg-center rounded-pill mt-4" style="background-color:#FFFF00;width: 25%; height: 70px">
+                                    <h3 class="fw-normal">DOCUMENTOS:</h3>
+                                </div>
+                            </div>
+                            <div class="container mt-5">
+                                <div class="row justify-content-md-center">
+                                    <div class="p-3 text-lg-center rounded-pill mt-4 w-auto ps-4 pe-4"  style="background-color:#FFFF00;width: 25%; height: 60px">
+                                        <h4 class="fw-normal">ACTA DE ELECCIÓN DEL ÓRGANO DIRECTIVO</h4>
+                                    </div>                
+                                </div>      
+                                <center><div class="archivoc mt-2">
+                                        <input type="file" name="archivo" id="">
+                                    </div> </center>
+                            </div>
+                            <div class="container mt-5">
+                                <div class="row justify-content-md-center">
+                                    <div class="p-3 text-lg-center rounded-pill mt-4 w-auto ps-4 pe-4"  style="background-color:#FFFF00;width: 25%; height: 60px">
+                                        <h4 class="fw-normal">ESTUDIO Y ACTA DE APROBACIÓN</h4>
+                                    </div>                
+                                </div>
+                                <center><div class="archivoc mt-2">
+                                        <input type="file" name="archivo" id="">
+                                    </div> </center>
+                            </div>
+                            <div class="container mt-5">
+                                <div class="row justify-content-md-center">
+                                    <div class="p-3 text-lg-center rounded-pill mt-4 w-auto ps-4 pe-4"  style="background-color:#FFFF00;width: 25%; height: 60px">
+                                        <h4 class="fw-normal">ACTA DE FUNCIÓN O DE CONTSITUCIÓN</h4>
+                                    </div>                
+                                </div>
+                                <center><div class="archivoc mt-2">
+                                        <input type="file" name="archivo" id="">
+                                    </div> </center>
+                            </div>
+                            <div class="container mt-5">
+                                <div class="row justify-content-md-center">
+                                    <div class="p-3 text-lg-center rounded-pill mt-4 w-auto ps-4 pe-4"  style="background-color:#FFFF00;width: 25%; height: 60px">
+                                        <h4 class="fw-normal">PLANO DE ACCIÓN DE LA CONSTITUCIÓN</h4>
+                                    </div>                
+                                </div>
+                                <center><div class="archivoc mt-2">
+                                        <input type="file" name="archivo" id="">
+                                    </div> </center>
+                            </div><br><br>
+                            <center> <div class="w-50"><div class="row container mt-3">
+                                        <div class="col d-grid  mx-auto  ">                     
+                                            <button onclick="mostrarprueba4();" data-bs-dismiss="modal" class=" btn px-3 text-white" style="background: red" >RECHAZAR</button>                                        </div>
+
+                                        <div class="col d-grid  mx-auto  ">                       
+                                            <button onclick="mostrarprueba3();" data-bs-dismiss="modal" class=" btn px-3 text-white" style="background: #0BD10B" >ACEPTAR</button>                                        </div>
+                                    </div></div> </div></center>
+
+                    </div>
+                </div>
+            </div>
+
+            <div  class="modal fade"  id="staticBackdrop3" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog" >
+                    <div style="width: 70em; margin-left: -19em" class=" modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel"></h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container">
+                                <div class="row justify-content-md-center">
+                                    <div class="p-4 text-lg-center rounded-pill mt-4 w-auto ps-5 pe-5" style="background-color:#FFFF00">
+                                        <h3>REGISTRA TÚ ORGANIZACIÓN SOCIAL</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ms-5 mt-4">
+                                <div class="p-3 text-lg-center rounded-pill mt-4"  style="background-color:#FFFF00;width: 23%; height: 70px">
+                                    <h3 class="fw-normal">ORGANIZACIÓN:</h3>
+                                </div>
+                            </div><br><br><br><br>
+                            <center><div class="container" style="border: 2px solid black; border-radius: 50px; width: 40%" >
+
+                                    <img th:src="@{/images/org.png}" alt="alt" width="350em" />
+
+                                </div></center><br><br><br><br>
+                            <div class="mx-5 mt-4">
+                                <div class="d-grid">
+                                    <div class="row">
+                                        <h3 class="col">Nombre de la Organización:</h3>
+                                        <h3 class="col">&nbsp&nbsp&nbsp&nbsp&nbspTipo de Organización:</h3>
+
+                                    </div>
+                                    <div class="row">
+                                        <input type="text" class="col form-control" id="exampleFormControlInput1" placeholder="">
+                                        <div class="col-1"> </div>
+                                        <input type="text" class="col form-control" id="exampleFormControlInput1" placeholder="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mx-5 mt-4">
+                                <div class="d-grid">
+                                    <div class="row">
+                                        <h3 class="col ">Código de Organización:</h3>
+                                        <h3 class="col ">&nbsp&nbsp&nbsp&nbsp&nbspZona:</h3>
+                                    </div>
+                                    <div class="row">
+                                        <input type="text" class="col form-control" id="exampleFormControlInput1" placeholder="">
+                                        <div class="col-1"> </div>
+                                        <input type="text" class="col form-control" id="exampleFormControlInput1" placeholder="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mx-5 mt-4">
+                                <div class="d-grid">
+                                    <div class="row">
+                                        <h3 class="col ">Nivel:</h3>
+                                        <h3 class="col ">&nbsp&nbsp&nbsp&nbsp&nbspN° de Resolución:</h3>
+                                    </div>
+                                    <div class="row">
+                                        <input type="text" class="col form-control" id="exampleFormControlInput1" placeholder="">
+                                        <div class="col-1"> </div>
+                                        <input type="text" class="col form-control" id="exampleFormControlInput1" placeholder="">
+                                    </div>
+                                </div>
+                            </div><div class="mx-5 mt-4">
+                                <div class="d-grid">
+                                    <div class="row">
+                                        <h3 class="col">Inicio de Vigencia:</h3>
+                                        <h3 class="col">&nbsp&nbsp&nbsp&nbsp&nbspFin de Vigencia:</h3>
+                                    </div>
+                                    <div class="row">
+                                        <input type="text" class="col form-control" id="exampleFormControlInput1" placeholder="">
+                                        <div class="col-1"> </div>
+                                        <input type="text" class="col form-control" id="exampleFormControlInput1" placeholder="">
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="ms-5 mt-5">
+                                <div class="p-3 text-lg-center rounded-pill mt-4"style="background-color:#FFFF00;width: 45%; height: 70px">
+                                    <h3 class="fw-normal">NÓMINA DE LA JUNTA DIRECTIVA:</h3>
+                                </div>
+                            </div>
+                            <div class="text-center mt-5">
+                                <h3>FECHA DE VIGENCIA</h3>
+                            </div>
+                            <div class="mx-5 mt-4">
+                                <div class="d-grid">
+                                    <div class="row">
+                                        <h3 class="col ">Inicio de Vigencia:</h3>
+                                        <h3 class="col ">&nbsp&nbsp&nbsp&nbsp&nbspFin de Vigencia:</h3>
+                                    </div>
+                                    <div class="row">
+                                        <input type="text" class="col form-control" id="exampleFormControlInput1" placeholder="">
+                                        <div class="col-1"> </div>
+                                        <input type="text" class="col form-control" id="exampleFormControlInput1" placeholder="">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="container mt-5">
+                                <table border="1" class="table table-bordered border-dark">
+                                    <thead>
+                                        <tr>
+                                            <th class="col-2">CARGO</th>
+                                            <th class="col-3">NOMBRES</th>
+                                            <th class="col-3">APELLIDOS</th>
+                                            <th class="col-2">DIRECCIÓN</th>
+                                            <th class="col-1">DNI</th>
+                                            <th class="col-1">OPCIONES</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Presidente(a)</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td><a href="url"><img src="src" alt="alt"/></a><a href="url"><img src="src" alt="alt"/></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Vice Presidente(a)</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td><a href="url"><img src="src" alt="alt"/></a><a href="url"><img src="src" alt="alt"/></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Secretario(a)</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td><a href="url"><img src="src" alt="alt"/></a><a href="url"><img src="src" alt="alt"/></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Tesorero(a)</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td><a href="url"><img src="src" alt="alt"/></a><a href="url"><img src="src" alt="alt"/></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Vocal 1</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td><a href="url"><img src="src" alt="alt"/></a><a href="url"><img src="src" alt="alt"/></a></td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="ms-5 mt-5">
+                                <div class="p-3 text-lg-center rounded-pill mt-4" style="background-color:#FFFF00;width: 25%; height: 70px">
+                                    <h3 class="fw-normal">NÓMINA DE SOCIOS:</h3>
+                                </div>
+                            </div>
+                            <div class="container mt-5">
+                                <center> <div class="mt-5 mb-3 col">
+                                        <button class="col-auto btn"  style="background: #0BD10B; color: white">&nbsp&nbsp&nbspAgregar Socio&nbsp&nbsp&nbsp</button>
+                                    </div> </center>
+                                <table border="1" class="table table-bordered border-dark">
+                                    <thead>
+                                        <tr>
+                                            <th class="col-2">N° SOCIOS</th>
+                                            <th class="col-3">NOMBRES</th>
+                                            <th class="col-3">APELLIDOS</th>
+                                            <th class="col-2">DDIRECCIÓN</th>
+                                            <th class="col-1">DNI</th>
+                                            <th class="col-1">OPCIONES</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Socio-01</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Socio-02</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Socio-03</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Socio-04</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>Socio-05</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Socio-06</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="ms-5 mt-5">
+                                <div class="p-3 text-lg-center rounded-pill mt-4" style="background-color:#FFFF00;width: 25%; height: 70px">
+                                    <h3 class="fw-normal">DOCUMENTOS:</h3>
+                                </div>
+                            </div>
+                            <div class="container mt-5">
+                                <div class="row justify-content-md-center">
+                                    <div class="p-3 text-lg-center rounded-pill mt-4 w-auto ps-4 pe-4"  style="background-color:#FFFF00;width: 25%; height: 60px">
+                                        <h4 class="fw-normal">ACTA DE ELECCIÓN DEL ÓRGANO DIRECTIVO</h4>
+                                    </div>                
+                                </div>      
+                                <center><div class="archivoc mt-2">
+                                        <input type="file" name="archivo" id="">
+                                    </div> </center>
+                            </div>
+                            <div class="container mt-5">
+                                <div class="row justify-content-md-center">
+                                    <div class="p-3 text-lg-center rounded-pill mt-4 w-auto ps-4 pe-4"  style="background-color:#FFFF00;width: 25%; height: 60px">
+                                        <h4 class="fw-normal">ESTUDIO Y ACTA DE APROBACIÓN</h4>
+                                    </div>                
+                                </div>
+                                <center><div class="archivoc mt-2">
+                                        <input type="file" name="archivo" id="">
+                                    </div> </center>
+                            </div>
+                            <div class="container mt-5">
+                                <div class="row justify-content-md-center">
+                                    <div class="p-3 text-lg-center rounded-pill mt-4 w-auto ps-4 pe-4"  style="background-color:#FFFF00;width: 25%; height: 60px">
+                                        <h4 class="fw-normal">ACTA DE FUNCIÓN O DE CONTSITUCIÓN</h4>
+                                    </div>                
+                                </div>
+                                <center><div class="archivoc mt-2">
+                                        <input type="file" name="archivo" id="">
+                                    </div> </center>
+                            </div>
+                            <div class="container mt-5">
+                                <div class="row justify-content-md-center">
+                                    <div class="p-3 text-lg-center rounded-pill mt-4 w-auto ps-4 pe-4"  style="background-color:#FFFF00;width: 25%; height: 60px">
+                                        <h4 class="fw-normal">PLANO DE ACCIÓN DE LA CONSTITUCIÓN</h4>
+                                    </div>                
+                                </div>
+                                <center><div class="archivoc mt-2">
+                                        <input type="file" name="archivo" id="">
+                                    </div> </center>
+                            </div><br><br>
+                            <center> <div class="w-50">
+                                    <div class="row container mt-3">
+                                        <div class="col d-grid  mx-auto  ">                     
+                                            <button onclick="mostrarprueba6();" data-bs-dismiss="modal" class=" btn px-3 text-white" style="background: red" >RECHAZAR</button>                                        </div>
+
+                                        <div class="col d-grid  mx-auto  ">                       
+                                            <button onclick="mostrarprueba5();" data-bs-dismiss="modal" class=" btn px-3 text-white" style="background: #0BD10B" >ACEPTAR</button>                                        </div>
+                                    </div></div>  </div></center>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+    </div>
+
+    <script th:src="@{/js/bootstrap.min.js}"></script>
+    <script th:src="@{/js/jquery.js}"></script>
+
+
+</body>
 </html>
