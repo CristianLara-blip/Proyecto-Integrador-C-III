@@ -4,6 +4,31 @@ a{
     text-decoration: none;
 }
 
+.cajitas{
+    margin: 2em;
+   
+}
+
+.admin2{
+    border: 2px solid black;
+    border-radius: 20px ;
+    background: #F7F6FB;
+    border: solid #F7F6FB;
+    font-weight: bold;
+   text-align: center;
+    width: 20%;
+    height: 50px;
+}
+
+.admin2:hover{
+     background: burlywood;
+      border: solid burlywood;
+}
+
+
+.atras{
+    margin-top: -9em;
+}
 
 .iniciar{
     background: #0BD10B;
