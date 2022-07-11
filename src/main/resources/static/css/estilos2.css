@@ -1,0 +1,279 @@
+.enlaces{
+    width: 35em;
+}
+
+.header{
+    min-height: 100vh;
+    background-image: url(http://www.munichaclacayo.gob.pe/portals/slider/imagenes/3.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    
+}
+
+.admin{
+    border: 2px solid black;
+    border-radius: 20px ;
+    background: #0BD10B;
+    border: solid #0BD10B;
+    font-weight: bold;
+    color: white;
+    width: 25%;
+    height: 70px;
+}
+
+.admin:hover{
+    background: #08BB08;
+    border: solid #08BB08;
+     color: white;
+}
+
+
+
+.negrita{
+    font-weight: bold;
+}
+
+
+.muni{
+    font-weight: bold;
+    margin-left: 40em;
+    
+}
+
+.ultimo{
+     margin-top: -8px;    
+}
+
+.esquina{
+    margin-top: -9px;
+    margin-left: -80px;
+}
+
+.bg-success{
+    background-color: #0bd10b!important;
+    background-size: cover;
+    position: fixed;
+    z-index: 20;
+    height: 10%;
+    width: 100%;
+}
+
+.navg a{
+    color: #f4f4f4!important;
+    font-size: 20px;
+}
+
+#le{ 
+    text-align: center;
+   font-size: 40px;
+   font-weight: 500;
+
+}
+
+.navg a:hover{
+    background-color: #08BB08;
+    border-radius: 8px;
+}
+
+.text-header{
+ min-height: 100vh;
+}
+
+
+
+.botones{
+    background: #0BD10B;
+    border: solid #0BD10B;
+    font-weight: bold;
+    color: white;
+     width: 10em;
+}
+
+.botones1{
+    background: #0BD10B;
+    border: solid #0BD10B;
+    font-weight: bold;
+    color: white;
+    height: 45px;
+    width: 15em;
+}
+
+.botones1:hover{
+    background: #08BB08;
+    border: solid #08BB08;
+    color: white;
+}
+
+.botones:hover{
+    background: #08BB08;
+    border: solid #08BB08;
+    color: white;
+}
+
+
+
+
+
+.btn-ini{
+    padding: 7px 12px;
+    color: #f4f4f4;
+    background-color: #0bd10b;
+    display: inline-block;
+    font-weight: 500;
+    border-radius: 5px;
+    outline: none !important;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+
+main{
+    background-color: rgb(255, 255, 255);
+   
+}
+
+.QS{
+    background-color: rgb(255, 255, 255);
+    transition: all 0.3s ease 0s;
+    padding: 20px 26px;
+
+}
+
+.btn-RS {
+    padding: 7px 12px;
+    color: black;
+    background-color: white;
+    display: inline-block;
+    font-weight: 500;
+    border-radius: 5px;
+    outline: none !important;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin: 0 auto;
+    
+}
+
+.grue{
+    font-weight: bold;
+}
+
+.sub {
+    padding: 7px 12px;
+    color: black;
+    background-color:#FFFF00;
+    border-radius: 8px;
+    display: inline-block;
+    font-weight: 500;
+    outline: none !important;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin: 0 auto;
+    font-weight: bold;
+    
+}
+ul {
+    list-style: none;
+}
+li::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url(https://us.123rf.com/450wm/skovoroda/skovoroda1105/skovoroda110500012/9527502-ilustraci%C3%B3n-de-signo-de-marca-de-verificaci%C3%B3n-verde-sobre-fondo-blanco.jpg?ver=6);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-right: 5px;
+}
+
+
+/*=========================FOOTER================================*/
+
+footer {
+    background: #0bd10b;
+    min-height: 60px;
+}
+footer p{
+    color:#f3f3f3;
+    text-align:center;
+}
+#iconos  i {
+    font-size: 26px;
+    padding: 0 8px;
+    color:#ffffff;
+}
+
+/*=========================MEDIA QUERIES PANTALLA ANCHA================================*/
+
+@media (max-width:1200px){
+    #intro, #equipo {
+        width:90% !important;
+        margin:auto;
+    }
+  
+    #local {
+        flex-wrap: wrap;
+        padding-top:30px;
+   }
+   .wrapper-local {
+    width:90%;
+    margin:auto;
+    padding-top:50px;    
+   }
+ 
+}
+/*=========================MEDIA QUERIES PANTALLA SM================================*/
+
+
+@media (max-width:768px) {
+
+    #intro, #equipo{
+        width:90% !important;
+        margin:auto;
+    }
+
+    
+    #img-equipo{
+        max-height:20rem !important;
+        width:90%;
+    }
+    .wrapper-local {
+        width:90%;
+        margin:auto;
+        padding-top:50px;    
+    }
+    #local {
+        flex-wrap: wrap;
+    }
+    .mapa img {
+        width:100%;
+        height:auto;
+    }
+    #bg-contactos{
+        top: -120px;
+    }
+
+
+}
+/*=========================MEDIA QUERIES PANTALLA EXTRA-SM================================*/
+
+@media (max-width: 576px) {
+    #servicios-fila-2 {
+        width:100% !important;
+    }
+    #servicios-fila-1 {
+        width:100% !important;
+    }
+
+    .icono-wrap{
+        flex-wrap:wrap !important;
+        justify-content: center !important;
+        text-align: center;
+    }
+}

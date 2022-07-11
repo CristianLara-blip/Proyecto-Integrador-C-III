@@ -14,11 +14,20 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
         <link th:href="@{/css/custom.css}"  rel="stylesheet" />
+        <link th:href="@{/css/estilos2.css}" rel="stylesheet" />
+      <link th:href="@{/css/estilos.css}" rel="stylesheet" />
     </head>
     <body>
-        <div class="container-fluid" layout:fragment="page-content">
-        <a th:href="@{/login}" class="btn btn-success" sec:authorize="hasRole('ROLE_ADMIN')">laprimadechis</a>
-</div>
+        <div class="fondo container-fluid" layout:fragment="page-content"> <br><br><br><br><br><br><br><br><br><br><br>
+      <center>  <a th:href="@{/user}" class="admin btn " sec:authorize="hasRole('ROLE_ADMIN')">MUNICIPALIDAD DE CHACLAYO<br>(Administrador)</a> </center>
+       <center> <a th:href="@{/user}" class="admin btn btn-success" sec:authorize="hasRole('ROLE_USER')">MUNICIPALIDAD DE CHACLAYO<br>(Usuario)</a> </center>
+        <center> <a th:href="@{/mesa}" class="admin btn btn-success" sec:authorize="hasRole('ROLE_MESA')">MUNICIPALIDAD DE CHACLAYO<br>(Mesa de partes)</a> </center>
+        <center> <a th:href="@{/subgerencia}" class="admin btn btn-success" sec:authorize="hasRole('ROLE_SUBGE')">MUNICIPALIDAD DE CHACLAYO<br>(Subgerencia)</a> </center>
+        <center> <a th:href="@{/gerencia}" class="admin btn btn-success" sec:authorize="hasRole('ROLE_GERE')">MUNICIPALIDAD DE CHACLAYO<br>(Gerencia)</a> </center>
+
+        
+        
+        </div>
 
 
             <script th:src="@{/js/bootstrap.min.js}"></script>

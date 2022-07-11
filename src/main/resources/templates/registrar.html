@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+    <head>
+        <title>Registrate</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
+        <link th:href="@{/css/estilos.css}" rel="stylesheet" />
+        <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Escudo_de_Chaclacayo.png/628px-Escudo_de_Chaclacayo.png"/>
+
+    </head>
+    <body>
+        <div class="fondo"><br>
+            <div class="cuadro3 container p-5">
+                <div class="row imagenes2">
+                    <div class="col"></div>
+                    <div class="col escudo3 container"></div>
+                    <div class="col logo3 container"></div>
+                    <div class="col"></div>
+                    <div>
+                        <div class="container formu">
+                            <h5 class="container titulo">¡CREA TU CUENTA!</h5>
+                            <form th:action="@{/login}" >
+                                <div class="row">
+                                    <div class="col mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label"><b>NOMBRES:</b></label>
+                                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ingrese sus nombres">
+                                    </div>
+                                    <div class="col mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label"><b>APELLIDOS:</b></label>
+                                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ingrese sus apellidos">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label"><b>DNI:</b></label>
+                                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ingrese su DNI">
+                                    </div>
+                                    <div class="col mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label"><b>CONTRASEÑA:</b></label>
+                                        <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="Ingrese su contraseña">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-7 mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label"><b>CORREO ELECTRÓNICO:</b></label>
+                                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ingrese su correo electrónico">
+                                    </div>
+                                    <div class="col mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label"><b>N° CELULAR</b></label>
+                                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ingrese su n° celular">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-7 mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label"><b>DIRECCIÓN:</b></label>
+                                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ingrese su dirección">
+                                    </div>
+                                    <div class="col mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label"><b>ZONA:</b></label>
+                                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ingrese su zona">
+                                    </div>
+                                </div>
+                                <p class="terminos">
+                                <center><input type="checkbox" name="terminos"> He leído y acepto los términos y condiciones </center>
+                                </p>
+                                <div class="d-grid gap-2">                    
+                                    <input type="submit" value="REGISTRARME" class="iniciar btn btn-primary">
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+
+                    <script th:src="@{/js/bootstrap.min.js}"></script>
+                    <script th:src="@{/js/jquery.js}"></script>
+
+                    </body>
+                    </html>

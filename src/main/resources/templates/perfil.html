@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/layout}">
+    <head th:replace="layout/layout :: head">
+        <title>Mi perfil</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
+    </head>
+    <body>
+        <div class="container-fluid" layout:fragment="page-content">  
+            <nav class=" navbar navbar-expand navbar-light " style=" background: #0BD10B">
+                <div class="container-fluid"> 
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Escudo_de_Chaclacayo.png/628px-Escudo_de_Chaclacayo.png" alt="alt" style="margin-left: 30px ; width: 80px"/>
+                    <img th:src="@{/images/logo.png}" alt="alt"  width="80" height="62" style="margin-left: -56%"/>
+
+                    
+                </div>
+            </nav>
+
+            <div class="ms-5 mt-5">
+                <div class="p-3 text-lg-center rounded-pill mt-4" style="background-color:#FFFF00;width: 25%; height: 70px">
+                    <h3 class="fw-normal">MI PERFIL</h3>
+                </div><br><br>
+                 <center><div class="container" style="border: 2px solid black; border-radius: 50px; width: 40%" >
+                <br>
+              <img src="https://produccionindustrialsite.files.wordpress.com/2016/06/1.png" alt="alt" width="350em" />
+        <br>            
+            </div></center><br><br><br><br>
+                <div class="container formu">
+                    
+                    <form th:action="@{/}" >
+                        <div class="row">
+                            <div class="col mb-3">
+                                <label for="exampleFormControlInput1" class="form-label"><b>NOMBRES:</b></label>
+                                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ingrese sus nombres">
+                            </div>
+                            <div class="col mb-3">
+                                <label for="exampleFormControlInput1" class="form-label"><b>APELLIDOS:</b></label>
+                                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ingrese sus apellidos">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col mb-3">
+                                <label for="exampleFormControlInput1" class="form-label"><b>DNI:</b></label>
+                                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ingrese su DNI">
+                            </div>
+                            <div class="col mb-3">
+                                <label for="exampleFormControlInput1" class="form-label"><b>CONTRASEÑA:</b></label>
+                                <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="Ingrese su contraseña">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-7 mb-3">
+                                <label for="exampleFormControlInput1" class="form-label"><b>CORREO ELECTRÓNICO:</b></label>
+                                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ingrese su correo electrónico">
+                            </div>
+                            <div class="col mb-3">
+                                <label for="exampleFormControlInput1" class="form-label"><b>N° CELULAR</b></label>
+                                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ingrese su n° celular">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-7 mb-3">
+                                <label for="exampleFormControlInput1" class="form-label"><b>DIRECCIÓN:</b></label>
+                                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ingrese su dirección">
+                            </div>
+                            <div class="col mb-3">
+                                <label for="exampleFormControlInput1" class="form-label"><b>ZONA:</b></label>
+                                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ingrese su zona">
+                            </div>
+                        </div>
+
+                        <center> <div class="w-50"><div class="row container mt-3">
+                                    
+                                    <div class="col d-grid  mx-auto  ">                       
+                                        <a th:href="@{/}" class="col  botones1 btn  " style="background: #0BD10B; font-weight: bold"><h5 style="color: white">&nbsp&nbspEDITAR&nbsp&nbsp</h5></a>
+                                    </div>
+                                </div></div></center>
+                </form>
+            
+
+
+
+        </div> 
+        <footer class="mt-5 p-4 color1 d-flex" style=" background: #0BD10B">
+            <h3 class="text-white justify-content-end w-50" style="margin-left: 28em">Municipalidad de Chaclacayo</h3>
+        </footer>
+    </div>
+
+    <script th:src="@{/js/bootstrap.min.js}"></script>
+    <script th:src="@{/js/jquery.js}"></script>
+</body>
+</html>

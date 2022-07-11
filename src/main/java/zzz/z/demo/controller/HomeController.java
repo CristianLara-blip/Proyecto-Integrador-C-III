@@ -15,8 +15,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class HomeController {
 
     @GetMapping("/login")
-    public String login(Model model, @AuthenticationPrincipal User user) {
-        //model.addAttribute("user", user.getUsername());
+    public String login(Model model, @AuthenticationPrincipal User user) { 
         return "login";
     }
 
@@ -25,6 +24,45 @@ public class HomeController {
         model.addAttribute("titulo", "Bienvenido a Thymeleaf");
         return "index";
     }
+    
+     @GetMapping("/register")
+    public String register() {
+        return "registrar";
+
+    }
+    
+    @GetMapping("/perfil")
+    public String perfil() {
+        return "perfil";
+
+    }
+    
+   
+
+    @GetMapping("/user")
+    public String usuarios() {
+        return "usuarios/usuarios";
+
+    }
+    
+     @GetMapping("/subgerencia")
+    public String subgerencia() {
+        return "subgerencia/subgerencia";
+
+    }
+    
+    @GetMapping("/mesa")
+    public String mesa() {
+        return "mesa/mesa";
+
+    }
+    
+    @GetMapping("/gerencia")
+    public String gerencia() {
+        return "gerencia/gerencia";
+
+    }
+    
     
   
 }

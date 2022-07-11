@@ -1,0 +1,138 @@
+
+
+a{
+    text-decoration: none;
+}
+
+
+.iniciar{
+    background: #0BD10B;
+    border: solid #0BD10B;
+    font-weight: bold;
+
+}
+
+.iniciar:hover{
+    background: #08BB08;
+    border: solid #08BB08;
+
+}
+
+.cuadro{
+    width: 35%;
+    height: 29.5em;
+    border-radius: 20px;
+    background: whitesmoke;
+    transition: 1s;
+    opacity: 0.9;
+}
+
+
+.fondo{
+    height: 668px;
+    background-image: url(http://www.munichaclacayo.gob.pe/portals/slider/imagenes/3.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+
+.escudo{
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Escudo_de_Chaclacayo.png/628px-Escudo_de_Chaclacayo.png);
+    width: 80px;
+    height: 95px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.logo{
+    background-image: url(/images/logo.png);
+    width: 80px;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+
+
+.cuadro2{
+    width: 40%;
+    height: 23em;
+    border-radius: 20px;
+    background: whitesmoke;
+    transition: 1s;
+    opacity: 0.9;
+}
+
+.escudo2{
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Escudo_de_Chaclacayo.png/628px-Escudo_de_Chaclacayo.png);
+    width: 150px;
+    height: 110px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.logo2{
+    background-image: url(/images/logo.png);
+    width: 100px;
+    height: 120px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+.cuadro3{
+    width: 40%;
+    height: 39em;
+    border-radius: 20px;
+    background: whitesmoke;
+    transition: 1s;
+    opacity: 0.9;
+}
+
+.titulo{
+    font-weight: bold;
+    text-align: center;
+}
+
+.imagenes{
+    margin-top: -20px;
+}
+
+.imagenes2{
+    margin-top: -25px;
+
+}
+
+.formu{
+    width: 32em;
+    margin-left: -40px;
+}
+
+.escudo3{
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Escudo_de_Chaclacayo.png/628px-Escudo_de_Chaclacayo.png);
+    width: 150px;
+    height: 110px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.logo3{
+    background-image: url(/images/logo.png);
+    width: 100px;
+    height: 120px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.terminos{
+    margin-top: -20px;
+}
+

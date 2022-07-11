@@ -1,20 +1,18 @@
 <!DOCTYPE html>
 
-<html xmlns:th="http://www.thymeleaf.org"
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
     <head>
-        <title>TODO supply a title</title>
+        <title>Principal</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="https://kit.fontawesome.com/82a228b425.js" crossorigin="anonymous"></script>
-        <link rel="icon" type="image/png" th:href="@{/assets/logo.png}" />
-        <!-- Core theme CSS (includes Bootstrap)-->
+        <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Escudo_de_Chaclacayo.png/628px-Escudo_de_Chaclacayo.png"/>
         <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
-        <link th:href="@{/css/estilos.css}" rel="stylesheet" />
         <link th:href="@{/css/estilos2.css}" rel="stylesheet" />
+
     </head>
     <body>
-        <!-----------Encbezado-->
+       <div layout:fragment="page-content"> <!-----------Encbezado-->
         <header class="header">
             <div class="bg-success">
                 <div class="container">
@@ -44,13 +42,15 @@
                 <div class="text-center text-justify " >
 
                     <h1 class="grue text-white" id="le">
-                        REGISTRO VIRTUAL DE ORGANIZACIONES SOCIALES DE LA MUNICIPALIDAD DE CHACLACAYO</h1>
-
+                        REGISTRO VIRTUAL DE ORGANIZACIONES
+                        SOCIALES
+                        DE LA MUNICIPALIDAD DE CHACLACAYO</h1>
+                    
 
 
                     <div class="d-grid d-md-block mx-auto gap-2 ">                        <br>
-                        <a   th:href="@{/register}"  class="botones1 btn me-md-5 " data-bs-toggle="modal2" data-bs-target="#staticBackdrop2"><h5>&nbsp&nbspREGISTRATE&nbsp&nbsp</h5></a>
-                        <a  class="botones1 btn btn-ini " data-bs-toggle="modal" data-bs-target="#staticBackdrop" ><h5>INICIAR SESIÓN</h5></a>
+                        <a th:href="@{/register}" class="botones1 btn me-md-5 " ><h5>&nbsp&nbspREGISTRATE&nbsp&nbsp</h5></a>
+                        <a th:href="@{/login}" class="botones1 btn btn-ini " ><h5>INICIAR SESIÓN</h5></a>
                     </div>
 
 
@@ -155,7 +155,6 @@
                             <p class="sub btn-RS btn-lg disabled " >FORMATOS</p>
                         </div>
                         <br>
-
                         <table class="table table-bordered">
                             <thead class="text-center">
                                 <tr>
@@ -171,6 +170,7 @@
                                     <td>Solicitud para el registro nuevo de organización</td>
                                     <td ><a  class="d-flex justify-content-center" href="#">
                                             <img  src="https://tecnoguia.net/wp-content/uploads/2021/02/Como-poner-simbolo-mayor-o-igual-en-Word.jpg" alt="" width="35"></a>
+                                        
                                     </td>
                                     <td>
                                         <a class="d-flex justify-content-center" href="">
@@ -219,6 +219,7 @@
                                     <td>
                                         <a class="d-flex justify-content-center" href="">
                                             <img src="https://www.mintur.gob.cu/wp-content/uploads/2022/04/icono-del-vector-de-descarga-archivo-pdf-documento-descargar-en-fondo-blanco-193233210.jpg" alt="" width="35"></a>
+                                       
                                     </td>
                                 </tr>
                                 <tr>
@@ -403,63 +404,17 @@
 
         <footer class="w-100  d-flex  align-items-center justify-content-center flex-wrap">
             <p class="muni fs-5 px-3 pt-3">Municipalidad de Chaclacayo</p>
-
-        </footer>
-    </div>
-
-
-
-
-
-    <!-- Modal -->
-    <div class="modal fade"  id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog" >
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="staticBackdropLabel"></h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="container">
-                        <div class="row">
-                        <div class="col"></div>
-                        <div class="col escudo container"></div>
-                        <div class="col logo container"></div>
-                        <div class="col"></div>
-                        </div>
-                        <div>
-                            <div class="container">
-                                <h5 class="container titulo">¡INGRESE AL SISTEMA!</h5><br>
-                                <form method="POST" th:action="@{/login}" >
-                                    <div class="mb-3">
-                                        <label for="form2Example1" class="form-label" ><b>USUARIO:</b></label>
-                                        <input type="text" class="form-control" id="username"  name="username" placeholder="Ingrese su código">
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="form2Example2" class="form-label"><b>CONTRASEÑA:</b></label>
-                                        <input type="password" class="form-control"  id="password" name="password" placeholder="Ingrese su contraseña">
-                                    </div>
-                                    <div class="d-grid gap-2">                    
-                                        <input type="submit" value="INICIAR SESIÓN" class="iniciar btn btn-primary">
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="mb-3 w-100 text-center mt-3">
-                                <a th:href="@{/register}" class="text-info">¿No tienes una cuenta?</a> <br>
-                            </div>
-                        </div>
-                    </div>
-                   
-                </div>
-            </div>
-        </div>
-        </div>
         
-        
+    </footer>
+</div>
+</div>
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-        <script th:src="@{/js/bootstrap.min.js}"></script>
-        <script th:src="@{/js/jquery.js}"></script>
 
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script th:src="@{/js/bootstrap.min.js}"></script>
+    <script th:src="@{/js/jquery.js}"></script>
 </body>
 </html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/layout}">
+    <head th:replace="layout/layout :: head">
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
+    </head>
+    <body>
+        <div class="container-fluid" layout:fragment="page-content">  
+
+
+            <nav class=" navbar navbar-expand navbar-light " style=" background: #0BD10B">
+                <div class="container-fluid"> 
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Escudo_de_Chaclacayo.png/628px-Escudo_de_Chaclacayo.png" alt="alt" style="margin-left: 30px ; width: 80px"/>
+                    <img th:src="@{/images/logo.png}" alt="alt"  width="80" height="62" style="margin-left: -50%"/>
+                    <div class="row">
+                        <div class="col bg-white rounded-circle p-3">
+                            <img src="https://produccionindustrialsite.files.wordpress.com/2016/06/1.png" alt="alt" style="width: 60px">
+                        </div>
+                        <div class="col bg-white p-2 rounded-pill fw-bold me-4 ms-2 my-2" id="navbarSupportedContent">
+                            <ul class="navbar-nav">
+                                <li class="nav-item dropdown">
+                                    <a class="mt-1 mx-5 nav-link dropdown-toggle fs-4" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Mesa de partes
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <li><a class="dropdown-item"  th:href="@{/perfil}">Mi perfil</a></li>
+                                        <li><hr class="dropdown-divider"></li>
+                                        <li>  <form th:action="@{/login}">
+                                                <a class="dropdown-item text-danger" href="#" onclick="this.parentNode.submit();"><i class="fa-solid fa-power-off mx-2 "></i>Cerrar sesión</a>
+                                            </form>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <div class="me-5 mt-4 ms-5">
+                <h1>Bienvenido(a), Jordy Antony Vega Macazana Caruajulca<i></i></h1>
+                <div class=" py-3 col-2 text-lg-center rounded-pill font-weight-normal mt-4" style="background-color:#FFFF00; width: 15em">
+                    <h4>SOLICITUDES</h4>
+                </div>
+            </div>
+            <div class="container mt-4">
+                <div class="d-grid">
+                    <div class="row">
+                        <h5 class="col-5">BUSCAR POR NOMBRE DE ORG. :</h5>
+                        <h5 class="col-5 ms-3">BUSCAR POR FECHA DE SOLICITUD:</h5>
+                    </div>
+                    <div class="row">
+                        <input type="text" name="name" class="col-5 mx-2  border border-dark" placeholder="Ingrese el nombre">
+                        <input type="text" name="name" class="col-5 mx-2  border border-dark" placeholder="Ingrese la fecha">
+                        <button class="col-auto btn"  style="background: #0BD10B; color: white">&nbsp&nbsp&nbspBuscar&nbsp&nbsp&nbsp</button>
+                    </div>
+                </div>
+            </div>
+            <div class="container mt-5">
+                <table border="2" class="table table-bordered border-dark">
+                    <thead>
+                        <tr>
+                            <th class="text-center col-5">ORGANIZACIONES</th>
+                            <th class="text-center col-3">FECHA</th>
+                            <th class="text-center col-3">DOCUMENTOS</th>
+                            <th class="text-center col-1">ESTADO</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-center">Organización Vaso de Leche</td>
+                            <td class="text-center">01/02/2022</td>
+                            <td class="text-center"><a href="Mesa1.jsp" class=" btn px-3 text-white" style="background: #0BD10B">Ver</a></td>
+                            <td class="col-1"><div class="ms-4 rounded-circle notifi2 bg-success"></div></td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">Organización Mujeres al Poder</td>
+                            <td class="text-center">01/02/2022</td>
+                            <td class="text-center"><a href="Mesa2.jsp"  class=" btn px-3 text-white" style="background: #0BD10B">Ver</a></td>
+                            <td class="col-1"><div class="ms-4 rounded-circle notifi2 bg-danger"></div></td>
+                        </tr>   
+                        <tr>
+                            <td class="text-center">Organización Progreso Juvenil</td>
+                            <td class="text-center">01/02/2022</td>
+                            <td class="text-center"><a href="Mesa2.jsp"  class=" btn px-3 text-white" style="background: #0BD10B">Ver</a></td>
+                            <td class="col-1"><div class="ms-4 rounded-circle notifi2 bg-danger"></div></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            <footer class="mt-5 p-4 color1 d-flex" style=" background: #0BD10B">
+                <h3 class="text-white justify-content-end w-50" style="margin-left: 28em">Municipalidad de Chaclacayo</h3>
+            </footer></div>
+
+        <script th:src="@{/js/bootstrap.min.js}"></script>
+        <script th:src="@{/js/jquery.js}"></script>
+    </body>
+</html>
