@@ -1,4 +1,4 @@
-package zzz.z.demo.entity;
+package com.example.plan.entity;
 
 import java.util.List;
 import javax.persistence.Column;

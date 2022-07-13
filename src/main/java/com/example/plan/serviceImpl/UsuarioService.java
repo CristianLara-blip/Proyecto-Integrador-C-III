@@ -1,4 +1,4 @@
-package zzz.z.demo.serviceImpl;
+package com.example.plan.serviceImpl;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,9 +12,9 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import zzz.z.demo.entity.Rol;
-import zzz.z.demo.entity.Usuario;
-import zzz.z.demo.repository.UsuarioRepository;
+import com.example.plan.entity.Rol;
+import com.example.plan.entity.Usuario;
+import com.example.plan.repository.UsuarioRepository;
 
 @Service("userDetailsService")
 @Slf4j

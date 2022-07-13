@@ -1,5 +1,5 @@
 
-package zzz.z.demo;
+package com.example.plan;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;

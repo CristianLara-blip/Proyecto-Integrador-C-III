@@ -1,4 +1,4 @@
-package zzz.z.demo;
+package com.example.plan;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

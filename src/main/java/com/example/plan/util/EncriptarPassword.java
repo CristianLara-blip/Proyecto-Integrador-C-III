@@ -1,4 +1,4 @@
-package zzz.z.demo.util;
+package com.example.plan.util;
 
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 

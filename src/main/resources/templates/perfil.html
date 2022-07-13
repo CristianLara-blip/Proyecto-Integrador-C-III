@@ -13,6 +13,7 @@
         <div class="container-fluid" layout:fragment="page-content">  
             <nav class=" navbar navbar-expand navbar-light " style=" background: #0BD10B">
                 <div class="container-fluid"> 
+                   
                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Escudo_de_Chaclacayo.png/628px-Escudo_de_Chaclacayo.png" alt="alt" style="margin-left: 30px ; width: 80px"/>
                     <img th:src="@{/images/logo.png}" alt="alt"  width="80" height="62" style="margin-right:  300rem"/>
 
@@ -26,50 +27,60 @@
                 </div><br><br>
                  <center><div class="container" style="border: 2px solid black; border-radius: 50px; width: 30%" >
                 <br>
+         
               <img src="https://produccionindustrialsite.files.wordpress.com/2016/06/1.png" alt="alt" width="250em" />
         <br>            
             </div></center><br>
                 <div class="container formu">
                     
                     <form th:action="@{/}" >
+                         <div class="row">
+                            <div class="col mb-3">
+                                <label for="exampleFormControlInput1" class="form-label"><b>USUARIO:</b></label>
+                                <input type="text" class="form-control" id="exampleFormControlInput1">
+                            </div>
+                            <div class="col mb-3">
+                                <label for="exampleFormControlInput1" class="form-label"><b>CONTRASEÑA:</b></label>
+                                <input type="text" class="form-control" id="exampleFormControlInput1" >
+                            </div>
+                        </div>
                         <div class="row">
                             <div class="col mb-3">
                                 <label for="exampleFormControlInput1" class="form-label"><b>NOMBRES:</b></label>
-                                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ingrese sus nombres">
+                                <input type="text" class="form-control" id="exampleFormControlInput1" >
                             </div>
                             <div class="col mb-3">
                                 <label for="exampleFormControlInput1" class="form-label"><b>APELLIDOS:</b></label>
-                                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ingrese sus apellidos">
+                                <input type="text" class="form-control" id="exampleFormControlInput1" >
                             </div>
                         </div>
                         <div class="row">
                             <div class="col mb-3">
                                 <label for="exampleFormControlInput1" class="form-label"><b>DNI:</b></label>
-                                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ingrese su DNI">
+                                <input type="text" class="form-control" id="exampleFormControlInput1" >
                             </div>
                             <div class="col mb-3">
-                                <label for="exampleFormControlInput1" class="form-label"><b>CONTRASEÑA:</b></label>
-                                <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="Ingrese su contraseña">
+                               
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-sm-7 mb-3">
                                 <label for="exampleFormControlInput1" class="form-label"><b>CORREO ELECTRÓNICO:</b></label>
-                                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ingrese su correo electrónico">
+                                <input type="text" class="form-control" id="exampleFormControlInput1" >
                             </div>
                             <div class="col mb-3">
                                 <label for="exampleFormControlInput1" class="form-label"><b>N° CELULAR</b></label>
-                                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ingrese su n° celular">
+                                <input type="text" class="form-control" id="exampleFormControlInput1" >
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-sm-7 mb-3">
                                 <label for="exampleFormControlInput1" class="form-label"><b>DIRECCIÓN:</b></label>
-                                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ingrese su dirección">
+                                <input type="text" class="form-control" id="exampleFormControlInput1" >
                             </div>
                             <div class="col mb-3">
                                 <label for="exampleFormControlInput1" class="form-label"><b>ZONA:</b></label>
-                                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ingrese su zona">
+                                <input type="text" class="form-control" id="exampleFormControlInput1" >
                             </div>
                         </div>
 
