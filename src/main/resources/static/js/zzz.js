@@ -1,8 +1,3 @@
-
-
-
-
-
 function user() {
 
     var x = document.getElementById("username");
