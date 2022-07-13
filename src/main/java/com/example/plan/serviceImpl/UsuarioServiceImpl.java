@@ -18,7 +18,7 @@ import com.example.plan.repository.UsuarioRepository;
 
 @Service("userDetailsService")
 @Slf4j
-public class UsuarioService implements UserDetailsService{
+public class UsuarioServiceImpl implements UserDetailsService{
 
     @Autowired
     private UsuarioRepository usuarioRepository;
