@@ -29,12 +29,13 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                     <a class="mt-1 mx-5 nav-link dropdown-toggle fs-4" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         Usuarios
                                     </a>
-                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <li><a class="dropdown-item"  th:href="@{/perfil}">Mi perfil</a></li>
-                                        <li><hr class="dropdown-divider"></li>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown" >
+                                            <li><a class="dropdown-item"  th:href="@{/}"  sec:authorize="hasRole('ROLE_ADMIN')">Regresar</a></li>
+                                        <li><a class="dropdown-item"  th:href="@{/perfil}" sec:authorize="hasRole('ROLE_USER')">Mi perfil</a></li>
+                                        
                                         <li>
 
-                                            <form th:action="@{/login}">
+                                            <form th:action="@{/login}" sec:authorize="hasRole('ROLE_USER')">
                                                 <a class="dropdown-item text-danger" href="#" onclick="this.parentNode.submit();"><i class="fa-solid fa-power-off mx-2 "></i>Cerrar sesión</a>
                                             </form>
 
