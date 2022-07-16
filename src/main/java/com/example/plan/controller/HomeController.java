@@ -27,13 +27,17 @@ public class HomeController {
 
     }
     
+    @GetMapping("/envio")
+    public String envio() {
+        return "envio";
+
+    }
+    
     @GetMapping("/perfil")
     public String perfil() {
         return "perfil";
 
     }
-    
-   
 
     @GetMapping("/user")
     public String usuarios() {

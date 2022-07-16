@@ -8,19 +8,18 @@ a{
 }
 
 .admin2{
-    border: 2px solid black;
+
     border-radius: 20px ;
-    background: #F7F6FB;
-    border: solid #F7F6FB;
+    background: grey;
     font-weight: bold;
    text-align: center;
+   color: white;
     width: 20%;
     height: 50px;
 }
 
 .admin2:hover{
-     background: burlywood;
-      border: solid burlywood;
+    color: black;
 }
 
 
@@ -52,12 +51,14 @@ a{
 
 
 .fondo{
-    height: 668px;
-    background-image: url(http://www.munichaclacayo.gob.pe/portals/slider/imagenes/3.jpg);
+   
+    
+    min-height: 100vh;
+     background-image: url(http://www.munichaclacayo.gob.pe/portals/slider/imagenes/3.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    overflow: hidden;
+    background-attachment: fixed;
 }
 
 

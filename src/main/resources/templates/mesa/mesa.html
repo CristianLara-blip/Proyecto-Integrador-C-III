@@ -27,12 +27,17 @@
                                     <a class="mt-1 mx-5 nav-link dropdown-toggle fs-4" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         Mesa de partes
                                     </a>
-                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <li><a class="dropdown-item"  th:href="@{/perfil}">Mi perfil</a></li>
-                                        <li><hr class="dropdown-divider"></li>
-                                        <li>  <form th:action="@{/login}">
+                                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown" >
+                                            <li><a class="dropdown-item"  th:href="@{/}"  sec:authorize="hasRole('ROLE_ADMIN')">Regresar</a></li>
+                                        <li><a class="dropdown-item"  th:href="@{/perfil}" sec:authorize="hasRole('ROLE_MESA')">Mi perfil</a></li>
+                                        
+                                        <li>
+
+                                            <form th:action="@{/login}" sec:authorize="hasRole('ROLE_MESA')">
                                                 <a class="dropdown-item text-danger" href="#" onclick="this.parentNode.submit();"><i class="fa-solid fa-power-off mx-2 "></i>Cerrar sesión</a>
                                             </form>
+
+
                                         </li>
                                     </ul>
                                 </li>
@@ -293,6 +298,7 @@
                             </div>
 
                             <div class="container mt-5">
+                                
                                 <table border="1" class="table table-bordered border-dark">
                                     <thead>
                                         <tr>
@@ -305,13 +311,16 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
+                                       <tr>
                                             <td>Presidente(a)</td>
                                             <td></td>
                                             <td></td>
                                             <td></td>
                                             <td></td>
-                                            <td></td>
+                                            <td>
+                                                <img src="https://cdn-icons-png.flaticon.com/512/45/45706.png" alt="alt" width="25em"/>
+                                                <img src="https://media.istockphoto.com/vectors/trash-bin-or-trash-can-symbol-icon-vector-id1266636179?k=20&m=1266636179&s=170667a&w=0&h=KHSsBYl9WHTyDfAd79ffdUc26aIAcDMETqeXKkpICAA=" alt="alt" width="33em"/>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>Vice Presidente(a)</td>
@@ -319,7 +328,10 @@
                                             <td></td>
                                             <td></td>
                                             <td></td>
-                                            <td></td>
+                                            <td>
+                                                  <img src="https://cdn-icons-png.flaticon.com/512/45/45706.png" alt="alt" width="25em"/>
+                                                <img src="https://media.istockphoto.com/vectors/trash-bin-or-trash-can-symbol-icon-vector-id1266636179?k=20&m=1266636179&s=170667a&w=0&h=KHSsBYl9WHTyDfAd79ffdUc26aIAcDMETqeXKkpICAA=" alt="alt" width="33em"/>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>Secretario(a)</td>
@@ -327,7 +339,10 @@
                                             <td></td>
                                             <td></td>
                                             <td></td>
-                                            <td></td>
+                                            <td>
+                                                  <img src="https://cdn-icons-png.flaticon.com/512/45/45706.png" alt="alt" width="25em"/>
+                                                <img src="https://media.istockphoto.com/vectors/trash-bin-or-trash-can-symbol-icon-vector-id1266636179?k=20&m=1266636179&s=170667a&w=0&h=KHSsBYl9WHTyDfAd79ffdUc26aIAcDMETqeXKkpICAA=" alt="alt" width="33em"/>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>Tesorero(a)</td>
@@ -335,7 +350,10 @@
                                             <td></td>
                                             <td></td>
                                             <td></td>
-                                            <td></td>
+                                            <td>
+                                                  <img src="https://cdn-icons-png.flaticon.com/512/45/45706.png" alt="alt" width="25em"/>
+                                                <img src="https://media.istockphoto.com/vectors/trash-bin-or-trash-can-symbol-icon-vector-id1266636179?k=20&m=1266636179&s=170667a&w=0&h=KHSsBYl9WHTyDfAd79ffdUc26aIAcDMETqeXKkpICAA=" alt="alt" width="33em"/>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>Vocal 1</td>
@@ -343,7 +361,10 @@
                                             <td></td>
                                             <td></td>
                                             <td></td>
-                                            <td></td>
+                                            <td>
+                                                  <img src="https://cdn-icons-png.flaticon.com/512/45/45706.png" alt="alt" width="25em"/>
+                                                <img src="https://media.istockphoto.com/vectors/trash-bin-or-trash-can-symbol-icon-vector-id1266636179?k=20&m=1266636179&s=170667a&w=0&h=KHSsBYl9WHTyDfAd79ffdUc26aIAcDMETqeXKkpICAA=" alt="alt" width="33em"/>
+                                            </td>
                                         </tr>
 
                                     </tbody>
@@ -355,16 +376,14 @@
                                 </div>
                             </div>
                             <div class="container mt-5">
-                                <center> <div class="mt-5 mb-3 col">
-                                        <button class="col-auto btn"  style="background: #0BD10B; color: white">&nbsp&nbsp&nbspAgregar Socio&nbsp&nbsp&nbsp</button>
-                                    </div> </center>
+                              
                                 <table border="1" class="table table-bordered border-dark">
                                     <thead>
                                         <tr>
                                             <th class="col-2">N° SOCIOS</th>
                                             <th class="col-3">NOMBRES</th>
                                             <th class="col-3">APELLIDOS</th>
-                                            <th class="col-2">DDIRECCIÓN</th>
+                                            <th class="col-2">DIRECCIÓN</th>
                                             <th class="col-1">DNI</th>
                                             <th class="col-1">OPCIONES</th>
                                         </tr>
@@ -376,7 +395,10 @@
                                             <td></td>
                                             <td></td>
                                             <td></td>
-                                             <td></td>
+                                            <td>
+                                                  <img src="https://cdn-icons-png.flaticon.com/512/45/45706.png" alt="alt" width="25em"/>
+                                                <img src="https://media.istockphoto.com/vectors/trash-bin-or-trash-can-symbol-icon-vector-id1266636179?k=20&m=1266636179&s=170667a&w=0&h=KHSsBYl9WHTyDfAd79ffdUc26aIAcDMETqeXKkpICAA=" alt="alt" width="33em"/>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>Socio-02</td>
@@ -384,7 +406,10 @@
                                             <td></td>
                                             <td></td>
                                             <td></td>
-                                             <td></td>
+                                            <td>
+                                                  <img src="https://cdn-icons-png.flaticon.com/512/45/45706.png" alt="alt" width="25em"/>
+                                                <img src="https://media.istockphoto.com/vectors/trash-bin-or-trash-can-symbol-icon-vector-id1266636179?k=20&m=1266636179&s=170667a&w=0&h=KHSsBYl9WHTyDfAd79ffdUc26aIAcDMETqeXKkpICAA=" alt="alt" width="33em"/>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>Socio-03</td>
@@ -392,7 +417,10 @@
                                             <td></td>
                                             <td></td>
                                             <td></td>
-                                             <td></td>
+                                            <td>
+                                                  <img src="https://cdn-icons-png.flaticon.com/512/45/45706.png" alt="alt" width="25em"/>
+                                                <img src="https://media.istockphoto.com/vectors/trash-bin-or-trash-can-symbol-icon-vector-id1266636179?k=20&m=1266636179&s=170667a&w=0&h=KHSsBYl9WHTyDfAd79ffdUc26aIAcDMETqeXKkpICAA=" alt="alt" width="33em"/>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>Socio-04</td>
@@ -400,7 +428,10 @@
                                             <td></td>
                                             <td></td>
                                             <td></td>
-                                             <td></td>
+                                            <td>
+                                                  <img src="https://cdn-icons-png.flaticon.com/512/45/45706.png" alt="alt" width="25em"/>
+                                                <img src="https://media.istockphoto.com/vectors/trash-bin-or-trash-can-symbol-icon-vector-id1266636179?k=20&m=1266636179&s=170667a&w=0&h=KHSsBYl9WHTyDfAd79ffdUc26aIAcDMETqeXKkpICAA=" alt="alt" width="33em"/>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>Socio-05</td>
@@ -408,7 +439,10 @@
                                             <td></td>
                                             <td></td>
                                             <td></td>
-                                             <td></td>
+                                            <td>
+                                                  <img src="https://cdn-icons-png.flaticon.com/512/45/45706.png" alt="alt" width="25em"/>
+                                                <img src="https://media.istockphoto.com/vectors/trash-bin-or-trash-can-symbol-icon-vector-id1266636179?k=20&m=1266636179&s=170667a&w=0&h=KHSsBYl9WHTyDfAd79ffdUc26aIAcDMETqeXKkpICAA=" alt="alt" width="33em"/>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>Socio-06</td>
@@ -416,7 +450,10 @@
                                             <td></td>
                                             <td></td>
                                             <td></td>
-                                             <td></td>
+                                            <td>
+                                                  <img src="https://cdn-icons-png.flaticon.com/512/45/45706.png" alt="alt" width="25em"/>
+                                                <img src="https://media.istockphoto.com/vectors/trash-bin-or-trash-can-symbol-icon-vector-id1266636179?k=20&m=1266636179&s=170667a&w=0&h=KHSsBYl9WHTyDfAd79ffdUc26aIAcDMETqeXKkpICAA=" alt="alt" width="33em"/>
+                                            </td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -580,6 +617,7 @@
                             </div>
 
                             <div class="container mt-5">
+                              
                                 <table border="1" class="table table-bordered border-dark">
                                     <thead>
                                         <tr>
@@ -592,13 +630,16 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
+                                       <tr>
                                             <td>Presidente(a)</td>
                                             <td></td>
                                             <td></td>
                                             <td></td>
                                             <td></td>
-                                            <td></td>
+                                            <td>
+                                                <img src="https://cdn-icons-png.flaticon.com/512/45/45706.png" alt="alt" width="25em"/>
+                                                <img src="https://media.istockphoto.com/vectors/trash-bin-or-trash-can-symbol-icon-vector-id1266636179?k=20&m=1266636179&s=170667a&w=0&h=KHSsBYl9WHTyDfAd79ffdUc26aIAcDMETqeXKkpICAA=" alt="alt" width="33em"/>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>Vice Presidente(a)</td>
@@ -606,7 +647,10 @@
                                             <td></td>
                                             <td></td>
                                             <td></td>
-                                             <td></td>
+                                            <td>
+                                                  <img src="https://cdn-icons-png.flaticon.com/512/45/45706.png" alt="alt" width="25em"/>
+                                                <img src="https://media.istockphoto.com/vectors/trash-bin-or-trash-can-symbol-icon-vector-id1266636179?k=20&m=1266636179&s=170667a&w=0&h=KHSsBYl9WHTyDfAd79ffdUc26aIAcDMETqeXKkpICAA=" alt="alt" width="33em"/>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>Secretario(a)</td>
@@ -614,7 +658,10 @@
                                             <td></td>
                                             <td></td>
                                             <td></td>
-                                             <td></td>
+                                            <td>
+                                                  <img src="https://cdn-icons-png.flaticon.com/512/45/45706.png" alt="alt" width="25em"/>
+                                                <img src="https://media.istockphoto.com/vectors/trash-bin-or-trash-can-symbol-icon-vector-id1266636179?k=20&m=1266636179&s=170667a&w=0&h=KHSsBYl9WHTyDfAd79ffdUc26aIAcDMETqeXKkpICAA=" alt="alt" width="33em"/>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>Tesorero(a)</td>
@@ -622,36 +669,40 @@
                                             <td></td>
                                             <td></td>
                                             <td></td>
-                                             <td></td>
-                                       </tr>
+                                            <td>
+                                                  <img src="https://cdn-icons-png.flaticon.com/512/45/45706.png" alt="alt" width="25em"/>
+                                                <img src="https://media.istockphoto.com/vectors/trash-bin-or-trash-can-symbol-icon-vector-id1266636179?k=20&m=1266636179&s=170667a&w=0&h=KHSsBYl9WHTyDfAd79ffdUc26aIAcDMETqeXKkpICAA=" alt="alt" width="33em"/>
+                                            </td>
+                                        </tr>
                                         <tr>
                                             <td>Vocal 1</td>
                                             <td></td>
                                             <td></td>
                                             <td></td>
                                             <td></td>
-                                             <td></td>
+                                            <td>
+                                                  <img src="https://cdn-icons-png.flaticon.com/512/45/45706.png" alt="alt" width="25em"/>
+                                                <img src="https://media.istockphoto.com/vectors/trash-bin-or-trash-can-symbol-icon-vector-id1266636179?k=20&m=1266636179&s=170667a&w=0&h=KHSsBYl9WHTyDfAd79ffdUc26aIAcDMETqeXKkpICAA=" alt="alt" width="33em"/>
+                                            </td>
                                         </tr>
 
                                     </tbody>
                                 </table>
                             </div>
                             <div class="ms-5 mt-5">
-                                <div class="p-3 text-lg-center rounded-pill mt-4" style="background-color:#FFFF00;width: 25%; height: 70px">
+                                <div class="p-3 text-lg-center rounded-pill mt-4" style="background-color:#FFFF00;width: 30%; height: 70px">
                                     <h3 class="fw-normal">NÓMINA DE SOCIOS:</h3>
                                 </div>
                             </div>
                             <div class="container mt-5">
-                                <center> <div class="mt-5 mb-3 col">
-                                        <button class="col-auto btn"  style="background: #0BD10B; color: white">&nbsp&nbsp&nbspAgregar Socio&nbsp&nbsp&nbsp</button>
-                                    </div> </center>
+                              
                                 <table border="1" class="table table-bordered border-dark">
                                     <thead>
                                         <tr>
                                             <th class="col-2">N° SOCIOS</th>
                                             <th class="col-3">NOMBRES</th>
                                             <th class="col-3">APELLIDOS</th>
-                                            <th class="col-2">DDIRECCIÓN</th>
+                                            <th class="col-2">DIRECCIÓN</th>
                                             <th class="col-1">DNI</th>
                                             <th class="col-1">OPCIONES</th>
                                         </tr>
@@ -663,7 +714,10 @@
                                             <td></td>
                                             <td></td>
                                             <td></td>
-                                             <td></td>
+                                            <td>
+                                                  <img src="https://cdn-icons-png.flaticon.com/512/45/45706.png" alt="alt" width="25em"/>
+                                                <img src="https://media.istockphoto.com/vectors/trash-bin-or-trash-can-symbol-icon-vector-id1266636179?k=20&m=1266636179&s=170667a&w=0&h=KHSsBYl9WHTyDfAd79ffdUc26aIAcDMETqeXKkpICAA=" alt="alt" width="33em"/>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>Socio-02</td>
@@ -671,7 +725,10 @@
                                             <td></td>
                                             <td></td>
                                             <td></td>
-                                             <td></td>
+                                            <td>
+                                                  <img src="https://cdn-icons-png.flaticon.com/512/45/45706.png" alt="alt" width="25em"/>
+                                                <img src="https://media.istockphoto.com/vectors/trash-bin-or-trash-can-symbol-icon-vector-id1266636179?k=20&m=1266636179&s=170667a&w=0&h=KHSsBYl9WHTyDfAd79ffdUc26aIAcDMETqeXKkpICAA=" alt="alt" width="33em"/>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>Socio-03</td>
@@ -679,7 +736,10 @@
                                             <td></td>
                                             <td></td>
                                             <td></td>
-                                             <td></td>
+                                            <td>
+                                                  <img src="https://cdn-icons-png.flaticon.com/512/45/45706.png" alt="alt" width="25em"/>
+                                                <img src="https://media.istockphoto.com/vectors/trash-bin-or-trash-can-symbol-icon-vector-id1266636179?k=20&m=1266636179&s=170667a&w=0&h=KHSsBYl9WHTyDfAd79ffdUc26aIAcDMETqeXKkpICAA=" alt="alt" width="33em"/>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>Socio-04</td>
@@ -687,8 +747,10 @@
                                             <td></td>
                                             <td></td>
                                             <td></td>
-                                             <td></td>
-                                            
+                                            <td>
+                                                  <img src="https://cdn-icons-png.flaticon.com/512/45/45706.png" alt="alt" width="25em"/>
+                                                <img src="https://media.istockphoto.com/vectors/trash-bin-or-trash-can-symbol-icon-vector-id1266636179?k=20&m=1266636179&s=170667a&w=0&h=KHSsBYl9WHTyDfAd79ffdUc26aIAcDMETqeXKkpICAA=" alt="alt" width="33em"/>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>Socio-05</td>
@@ -696,7 +758,10 @@
                                             <td></td>
                                             <td></td>
                                             <td></td>
-                                             <td></td>
+                                            <td>
+                                                  <img src="https://cdn-icons-png.flaticon.com/512/45/45706.png" alt="alt" width="25em"/>
+                                                <img src="https://media.istockphoto.com/vectors/trash-bin-or-trash-can-symbol-icon-vector-id1266636179?k=20&m=1266636179&s=170667a&w=0&h=KHSsBYl9WHTyDfAd79ffdUc26aIAcDMETqeXKkpICAA=" alt="alt" width="33em"/>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>Socio-06</td>
@@ -704,7 +769,10 @@
                                             <td></td>
                                             <td></td>
                                             <td></td>
-                                             <td></td>
+                                            <td>
+                                                  <img src="https://cdn-icons-png.flaticon.com/512/45/45706.png" alt="alt" width="25em"/>
+                                                <img src="https://media.istockphoto.com/vectors/trash-bin-or-trash-can-symbol-icon-vector-id1266636179?k=20&m=1266636179&s=170667a&w=0&h=KHSsBYl9WHTyDfAd79ffdUc26aIAcDMETqeXKkpICAA=" alt="alt" width="33em"/>
+                                            </td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -869,6 +937,7 @@
                             </div>
 
                             <div class="container mt-5">
+                             
                                 <table border="1" class="table table-bordered border-dark">
                                     <thead>
                                         <tr>
@@ -881,13 +950,16 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
+                                      <tr>
                                             <td>Presidente(a)</td>
                                             <td></td>
                                             <td></td>
                                             <td></td>
                                             <td></td>
-                                            <td><a href="url"><img src="src" alt="alt"/></a><a href="url"><img src="src" alt="alt"/></a></td>
+                                            <td>
+                                                <img src="https://cdn-icons-png.flaticon.com/512/45/45706.png" alt="alt" width="25em"/>
+                                                <img src="https://media.istockphoto.com/vectors/trash-bin-or-trash-can-symbol-icon-vector-id1266636179?k=20&m=1266636179&s=170667a&w=0&h=KHSsBYl9WHTyDfAd79ffdUc26aIAcDMETqeXKkpICAA=" alt="alt" width="33em"/>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>Vice Presidente(a)</td>
@@ -895,7 +967,10 @@
                                             <td></td>
                                             <td></td>
                                             <td></td>
-                                            <td><a href="url"><img src="src" alt="alt"/></a><a href="url"><img src="src" alt="alt"/></a></td>
+                                            <td>
+                                                  <img src="https://cdn-icons-png.flaticon.com/512/45/45706.png" alt="alt" width="25em"/>
+                                                <img src="https://media.istockphoto.com/vectors/trash-bin-or-trash-can-symbol-icon-vector-id1266636179?k=20&m=1266636179&s=170667a&w=0&h=KHSsBYl9WHTyDfAd79ffdUc26aIAcDMETqeXKkpICAA=" alt="alt" width="33em"/>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>Secretario(a)</td>
@@ -903,7 +978,10 @@
                                             <td></td>
                                             <td></td>
                                             <td></td>
-                                            <td><a href="url"><img src="src" alt="alt"/></a><a href="url"><img src="src" alt="alt"/></a></td>
+                                            <td>
+                                                  <img src="https://cdn-icons-png.flaticon.com/512/45/45706.png" alt="alt" width="25em"/>
+                                                <img src="https://media.istockphoto.com/vectors/trash-bin-or-trash-can-symbol-icon-vector-id1266636179?k=20&m=1266636179&s=170667a&w=0&h=KHSsBYl9WHTyDfAd79ffdUc26aIAcDMETqeXKkpICAA=" alt="alt" width="33em"/>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>Tesorero(a)</td>
@@ -911,7 +989,10 @@
                                             <td></td>
                                             <td></td>
                                             <td></td>
-                                            <td><a href="url"><img src="src" alt="alt"/></a><a href="url"><img src="src" alt="alt"/></a></td>
+                                            <td>
+                                                  <img src="https://cdn-icons-png.flaticon.com/512/45/45706.png" alt="alt" width="25em"/>
+                                                <img src="https://media.istockphoto.com/vectors/trash-bin-or-trash-can-symbol-icon-vector-id1266636179?k=20&m=1266636179&s=170667a&w=0&h=KHSsBYl9WHTyDfAd79ffdUc26aIAcDMETqeXKkpICAA=" alt="alt" width="33em"/>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>Vocal 1</td>
@@ -919,28 +1000,29 @@
                                             <td></td>
                                             <td></td>
                                             <td></td>
-                                            <td><a href="url"><img src="src" alt="alt"/></a><a href="url"><img src="src" alt="alt"/></a></td>
+                                            <td>
+                                                  <img src="https://cdn-icons-png.flaticon.com/512/45/45706.png" alt="alt" width="25em"/>
+                                                <img src="https://media.istockphoto.com/vectors/trash-bin-or-trash-can-symbol-icon-vector-id1266636179?k=20&m=1266636179&s=170667a&w=0&h=KHSsBYl9WHTyDfAd79ffdUc26aIAcDMETqeXKkpICAA=" alt="alt" width="33em"/>
+                                            </td>
                                         </tr>
 
                                     </tbody>
                                 </table>
                             </div>
                             <div class="ms-5 mt-5">
-                                <div class="p-3 text-lg-center rounded-pill mt-4" style="background-color:#FFFF00;width: 25%; height: 70px">
+                                <div class="p-3 text-lg-center rounded-pill mt-4" style="background-color:#FFFF00;width: 30%; height: 70px">
                                     <h3 class="fw-normal">NÓMINA DE SOCIOS:</h3>
                                 </div>
                             </div>
                             <div class="container mt-5">
-                                <center> <div class="mt-5 mb-3 col">
-                                        <button class="col-auto btn"  style="background: #0BD10B; color: white">&nbsp&nbsp&nbspAgregar Socio&nbsp&nbsp&nbsp</button>
-                                    </div> </center>
+                              
                                 <table border="1" class="table table-bordered border-dark">
                                     <thead>
                                         <tr>
                                             <th class="col-2">N° SOCIOS</th>
                                             <th class="col-3">NOMBRES</th>
                                             <th class="col-3">APELLIDOS</th>
-                                            <th class="col-2">DDIRECCIÓN</th>
+                                            <th class="col-2">DIRECCIÓN</th>
                                             <th class="col-1">DNI</th>
                                             <th class="col-1">OPCIONES</th>
                                         </tr>
@@ -952,7 +1034,10 @@
                                             <td></td>
                                             <td></td>
                                             <td></td>
-                                             <td></td>
+                                            <td>
+                                                  <img src="https://cdn-icons-png.flaticon.com/512/45/45706.png" alt="alt" width="25em"/>
+                                                <img src="https://media.istockphoto.com/vectors/trash-bin-or-trash-can-symbol-icon-vector-id1266636179?k=20&m=1266636179&s=170667a&w=0&h=KHSsBYl9WHTyDfAd79ffdUc26aIAcDMETqeXKkpICAA=" alt="alt" width="33em"/>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>Socio-02</td>
@@ -960,7 +1045,10 @@
                                             <td></td>
                                             <td></td>
                                             <td></td>
- <td></td>
+                                            <td>
+                                                  <img src="https://cdn-icons-png.flaticon.com/512/45/45706.png" alt="alt" width="25em"/>
+                                                <img src="https://media.istockphoto.com/vectors/trash-bin-or-trash-can-symbol-icon-vector-id1266636179?k=20&m=1266636179&s=170667a&w=0&h=KHSsBYl9WHTyDfAd79ffdUc26aIAcDMETqeXKkpICAA=" alt="alt" width="33em"/>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>Socio-03</td>
@@ -968,7 +1056,10 @@
                                             <td></td>
                                             <td></td>
                                             <td></td>
-                                             <td></td>
+                                            <td>
+                                                  <img src="https://cdn-icons-png.flaticon.com/512/45/45706.png" alt="alt" width="25em"/>
+                                                <img src="https://media.istockphoto.com/vectors/trash-bin-or-trash-can-symbol-icon-vector-id1266636179?k=20&m=1266636179&s=170667a&w=0&h=KHSsBYl9WHTyDfAd79ffdUc26aIAcDMETqeXKkpICAA=" alt="alt" width="33em"/>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>Socio-04</td>
@@ -976,8 +1067,10 @@
                                             <td></td>
                                             <td></td>
                                             <td></td>
-                                             <td></td>
-
+                                            <td>
+                                                  <img src="https://cdn-icons-png.flaticon.com/512/45/45706.png" alt="alt" width="25em"/>
+                                                <img src="https://media.istockphoto.com/vectors/trash-bin-or-trash-can-symbol-icon-vector-id1266636179?k=20&m=1266636179&s=170667a&w=0&h=KHSsBYl9WHTyDfAd79ffdUc26aIAcDMETqeXKkpICAA=" alt="alt" width="33em"/>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>Socio-05</td>
@@ -985,7 +1078,10 @@
                                             <td></td>
                                             <td></td>
                                             <td></td>
-                                             <td></td>
+                                            <td>
+                                                  <img src="https://cdn-icons-png.flaticon.com/512/45/45706.png" alt="alt" width="25em"/>
+                                                <img src="https://media.istockphoto.com/vectors/trash-bin-or-trash-can-symbol-icon-vector-id1266636179?k=20&m=1266636179&s=170667a&w=0&h=KHSsBYl9WHTyDfAd79ffdUc26aIAcDMETqeXKkpICAA=" alt="alt" width="33em"/>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>Socio-06</td>
@@ -993,7 +1089,10 @@
                                             <td></td>
                                             <td></td>
                                             <td></td>
-                                             <td></td>
+                                            <td>
+                                                  <img src="https://cdn-icons-png.flaticon.com/512/45/45706.png" alt="alt" width="25em"/>
+                                                <img src="https://media.istockphoto.com/vectors/trash-bin-or-trash-can-symbol-icon-vector-id1266636179?k=20&m=1266636179&s=170667a&w=0&h=KHSsBYl9WHTyDfAd79ffdUc26aIAcDMETqeXKkpICAA=" alt="alt" width="33em"/>
+                                            </td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -1058,22 +1157,9 @@
             
             
             </div>
-
-            
-            
-            
-            
-            
             
         </div>
-        
-        
-        
-        
-        
-        
-        
-        
+
 
         <script th:src="@{/js/bootstrap.min.js}"></script>
         <script th:src="@{/js/jquery.js}"></script>

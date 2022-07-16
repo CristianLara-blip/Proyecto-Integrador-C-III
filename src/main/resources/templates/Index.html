@@ -9,7 +9,6 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
-        <link th:href="@{/css/custom.css}"  rel="stylesheet" />
         <link th:href="@{/css/estilos2.css}" rel="stylesheet" />
         <link th:href="@{/css/estilos.css}" rel="stylesheet" />
     </head>
@@ -19,17 +18,20 @@
         <div class="fondo container-fluid" layout:fragment="page-content" > <br><br><br><br><br><br><br><br><br><br><br>
             <div class="atras" sec:authorize="hasRole('ROLE_ADMIN')">  
                 <div class="row">
+                    <div class="col"></div>
                     <a th:href="@{/user}" class="cajitas col admin btn " >MUNICIPALIDAD DE CHACLAYO<br>(Usuario)</a> 
                     <a th:href="@{/mesa}" class="cajitas col admin btn " >MUNICIPALIDAD DE CHACLAYO<br>(Mesa de Partes)</a>
+                <div class="col"></div>
                 </div>
                 <div class="row">
-                    <a th:href="@{/subgerencia}" class="cajitas col admin btn btn-success" >MUNICIPALIDAD DE CHACLAYO<br>(Subgerencia)</a>
-                    <a th:href="@{/gerencia}" class="cajitas col admin btn btn-success" >MUNICIPALIDAD DE CHACLAYO<br>(Gerencia)</a> 
+                     <div class="col"></div>
+                    <a th:href="@{/subgerencia}" class="cajitas col admin btn" >MUNICIPALIDAD DE CHACLAYO<br>(Subgerencia)</a>
+                    <a th:href="@{/gerencia}" class="cajitas col admin btn " >MUNICIPALIDAD DE CHACLAYO<br>(Gerencia)</a> 
+               <div class="col"></div>
                 </div>
 
-                <center>  <a class="cajitas admin2 dropdown-item"  th:href="@{/perfil}">Mi perfil</a> </center>
-
-                <center>  <a th:href="@{/login}" class="cajitas admin2 dropdown-item text-danger" href="#" onclick="this.parentNode.submit();"><i class="fa-solid fa-power-off mx-2 "></i>Cerrar sesión</a> </center>
+                <center>  <a class="cajitas admin2  dropdown-item btn"  th:href="@{/perfil}">Mi perfil</a> </center>
+                <center>  <a th:href="@{/login}" class="cajitas  admin2 dropdown-item btn" href="#" onclick="this.parentNode.submit();"><i class="fa-solid fa-power-off mx-2 "></i>Cerrar sesión</a> </center>
 
             </div>
 
