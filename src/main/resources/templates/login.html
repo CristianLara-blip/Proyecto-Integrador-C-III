@@ -3,12 +3,12 @@
 <html xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
     <head>
-        <title>TODO supply a title</title>
+        <title>Principal</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://kit.fontawesome.com/82a228b425.js" crossorigin="anonymous"></script>
         <link rel="icon" type="image/png" th:href="@{/assets/logo.png}" />
-        <!-- Core theme CSS (includes Bootstrap)-->
+        <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Escudo_de_Chaclacayo.png/628px-Escudo_de_Chaclacayo.png"/>
         <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
         <link th:href="@{/css/estilos.css}" rel="stylesheet" />
         <link th:href="@{/css/estilos2.css}" rel="stylesheet" />
@@ -20,8 +20,8 @@
                 <div class="container">
                     <nav class=" navbar navbar-expand-lg navbar-light ">
                         <div class="esquina container-fluid ">
-                            <a class="navbar-brand " href="#titulo" >
-                                
+                            <a class="navbar-brand " href="" >
+
                                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Escudo_de_Chaclacayo.png/628px-Escudo_de_Chaclacayo.png" alt=""  width="60" height="auto" >
                                 <img th:src="@{/images/logo.png}" alt="alt"  width="80" height="55"/>
                             </a>
@@ -47,10 +47,8 @@
                     <h1 class="grue text-white" id="le">
                         REGISTRO VIRTUAL DE ORGANIZACIONES SOCIALES DE LA MUNICIPALIDAD DE CHACLACAYO</h1>
 
-
-
                     <div class="d-grid d-md-block mx-auto gap-2 ">                        <br>
-                        <a   th:href="@{/register}"  class="botones1 btn me-md-5 " data-bs-toggle="modal2" data-bs-target="#staticBackdrop2"><h5>&nbsp&nbspREGISTRATE&nbsp&nbsp</h5></a>
+                        <a   th:href="@{/register}"  class="botones1 btn me-md-5 " data-bs-toggle="modal2" data-bs-target="#staticBackdrop2"><h5>&nbsp&nbspREGISTRASE&nbsp&nbsp</h5></a>
                         <a  class="botones1 btn btn-ini " data-bs-toggle="modal" data-bs-target="#staticBackdrop" ><h5>INICIAR SESIÓN</h5></a>
                     </div>
 
@@ -195,7 +193,7 @@
                                     <td ><a th:href="@{/images/Acta de fundación.docx}" download="Acta de fundación o de Constitución.docx"  class="d-flex justify-content-center" href="#">
                                             <img  src="https://tecnoguia.net/wp-content/uploads/2021/02/Como-poner-simbolo-mayor-o-igual-en-Word.jpg" alt="" width="35"></a>
                                     </td>
-                                  
+
                                     <td ><a th:href="@{/images/Acta de fundación.pdf}" download="Acta de fundación o de Constitución.pdf"  class="d-flex justify-content-center" href="#">
                                             <img src="https://www.mintur.gob.cu/wp-content/uploads/2022/04/icono-del-vector-de-descarga-archivo-pdf-documento-descargar-en-fondo-blanco-193233210.jpg" alt="" width="35"></a>
                                     </td>
@@ -206,7 +204,7 @@
                                     <td ><a th:href="@{/images/Estatuto y Acta.docx}" download="Estatuto y Acta de aprobación.docx"  class="d-flex justify-content-center" href="#">
                                             <img  src="https://tecnoguia.net/wp-content/uploads/2021/02/Como-poner-simbolo-mayor-o-igual-en-Word.jpg" alt="" width="35"></a>
                                     </td>
-                                  
+
                                     <td ><a th:href="@{/images/Estatuto y Acta.pdf}" download="Estatuto y Acta de aprobación.pdf"  class="d-flex justify-content-center" href="#">
                                             <img src="https://www.mintur.gob.cu/wp-content/uploads/2022/04/icono-del-vector-de-descarga-archivo-pdf-documento-descargar-en-fondo-blanco-193233210.jpg" alt="" width="35"></a>
                                     </td>
@@ -217,7 +215,7 @@
                                     <td ><a th:href="@{/images/Acta de elección.docx}" download="Acta de elección del Órgano Directivo.docx"  class="d-flex justify-content-center" href="#">
                                             <img  src="https://tecnoguia.net/wp-content/uploads/2021/02/Como-poner-simbolo-mayor-o-igual-en-Word.jpg" alt="" width="35"></a>
                                     </td>
-                                
+
                                     <td ><a th:href="@{/images/Acta de elección.pdf}" download="Acta de elección del Órgano Directivo.pdf"  class="d-flex justify-content-center" href="#">
                                             <img src="https://www.mintur.gob.cu/wp-content/uploads/2022/04/icono-del-vector-de-descarga-archivo-pdf-documento-descargar-en-fondo-blanco-193233210.jpg" alt="" width="35"></a>
                                     </td>
@@ -228,7 +226,7 @@
                                     <td ><a th:href="@{/images/Nómina de los miembros del órgano directivo.docx}" download="Nómina de los miembros del órgano directivo.docx"  class="d-flex justify-content-center" href="#">
                                             <img  src="https://tecnoguia.net/wp-content/uploads/2021/02/Como-poner-simbolo-mayor-o-igual-en-Word.jpg" alt="" width="35"></a>
                                     </td>
-                                   
+
                                     <td ><a th:href="@{/images/Nómina de los miembros del órgano directivo.pdf}" download="Nómina de los miembros del órgano directivo.pdf"  class="d-flex justify-content-center" href="#">
                                             <img src="https://www.mintur.gob.cu/wp-content/uploads/2022/04/icono-del-vector-de-descarga-archivo-pdf-documento-descargar-en-fondo-blanco-193233210.jpg" alt="" width="35"></a>
                                     </td>
@@ -239,7 +237,7 @@
                                     <td ><a th:href="@{/images/Nómina de los miembros de la Organización Social.docx}" download="Nómina de los miembros de la Organización Social.docx"  class="d-flex justify-content-center" href="#">
                                             <img  src="https://tecnoguia.net/wp-content/uploads/2021/02/Como-poner-simbolo-mayor-o-igual-en-Word.jpg" alt="" width="35"></a>
                                     </td>
-                                   
+
                                     <td ><a th:href="@{/images/Nómina de los miembros de la Organización Social.pdf}" download="Nómina de los miembros de la Organización Social.pdf"  class="d-flex justify-content-center" href="#">
                                             <img src="https://www.mintur.gob.cu/wp-content/uploads/2022/04/icono-del-vector-de-descarga-archivo-pdf-documento-descargar-en-fondo-blanco-193233210.jpg" alt="" width="35"></a>
                                     </td>
@@ -250,7 +248,7 @@
                                     <td ><a th:href="@{/images/Plano referencial.docx}" download="Plano o croquis referencial de la ubicación del local.docx"  class="d-flex justify-content-center" href="#">
                                             <img  src="https://tecnoguia.net/wp-content/uploads/2021/02/Como-poner-simbolo-mayor-o-igual-en-Word.jpg" alt="" width="35"></a>
                                     </td>
-                                   
+
                                     <td ><a th:href="@{/images/Plano referencial.pdf}" download="Plano o croquis referencial de la ubicación del local.pdf"  class="d-flex justify-content-center" href="#">
                                             <img src="https://www.mintur.gob.cu/wp-content/uploads/2022/04/icono-del-vector-de-descarga-archivo-pdf-documento-descargar-en-fondo-blanco-193233210.jpg" alt="" width="35"></a>
                                     </td>
@@ -261,7 +259,7 @@
                                     <td ><a th:href="@{/images/Plano.docx}" download="Plano o croquis del radio de acción de la organización.docx"  class="d-flex justify-content-center" href="#">
                                             <img  src="https://tecnoguia.net/wp-content/uploads/2021/02/Como-poner-simbolo-mayor-o-igual-en-Word.jpg" alt="" width="35"></a>
                                     </td>
-                                 
+
                                     <td ><a th:href="@{/images/Plano.pdf}" download="Plano o croquis del radio de acción de la organización.pdf"  class="d-flex justify-content-center" href="#">
                                             <img src="https://www.mintur.gob.cu/wp-content/uploads/2022/04/icono-del-vector-de-descarga-archivo-pdf-documento-descargar-en-fondo-blanco-193233210.jpg" alt="" width="35"></a>
                                     </td>
@@ -288,9 +286,37 @@
 
                         <div class=" d-grid gap-2 d-md-flex justify-content-md-center ">
                             <form class="d-flex text-center">
-                                <h6 class="p-4">BÚSQUEDA POR TIPO<input class="form-control me-2 m-3" type="search" placeholder="Todos" aria-label="Search"></h6>
-                                <h6 class="p-4">BÚSQUEDA POR AÑO<input class="form-control me-2 m-3" type="search" placeholder="Todos" aria-label="Search"></h6>
-                                <h6 class="p-4">BÚSQUEDA POR ZONA<input class="form-control me-2 m-3 " type="search" placeholder="Todos" aria-label="Search"></h6>
+                                <h6 class="p-4">BÚSQUEDA POR TIPO
+                                    <select name="escuelas" id="escuelas" class="form-control me-2 m-3" type="search" aria-label="Search">
+                                        <option value="0">Seleccionar Tipo </option>
+                                        <option value="1">Org. Vecinal</option>
+                                        <option value="2">Org. Temática</option>
+                                        <option value="2">Org. Municipal</option>
+                                        <option value="2">Org. Ecónomicas</option>
+                                        <option value="2">Org. Sociales Alimentarias</option>
+                                        <option value="2">Org. Población Vulnerables</option>
+                                    </select>
+                                </h6>
+                                <h6 class="p-4">BÚSQUEDA POR AÑO
+                                    <select name="escuelas" id="escuelas" class="form-control me-2 m-3" type="search" aria-label="Search">
+                                        <option value="0">Seleccionar Año </option>
+                                        <option value="1">2022</option>
+                                        <option value="2">2021</option>
+                                        <option value="2">2020</option>
+                                        <option value="2">2019</option>
+                                        <option value="2">2018</option>
+                                        <option value="2">2017</option>
+                                    </select>                                </h6>
+                                <h6 class="p-4">BÚSQUEDA POR ZONA
+                                    <select name="escuelas" id="escuelas" class="form-control me-2 m-3" type="search" aria-label="Search">
+                                        <option value="0">Seleccionar Zona </option>
+                                        <option value="1">Los Pinos</option>
+                                        <option value="2">Moron 5 Zona</option>
+                                        <option value="2">Cerro Huascata</option>
+                                        <option value="2">Virgen de Famita</option>
+                                        <option value="2">Miguel Grau 2 Etapa</option>
+                                        <option value="2">Brisas de california UPIS</option>
+                                    </select>                                   </h6>
                                 <h6 class="m-5 p-3"><button class="ultimo negrita botones btn" type="submit">BUSCAR</button></h6>
                             </form>
                         </div>
@@ -330,8 +356,8 @@
                                     <th scope="row">1</th>
                                     <td>223-2003</td>
                                     <td>Org. Vaso de Leche</td>
-                                    <td>local</td>
-                                    <td>Chaclayo</td>
+                                    <td>Local</td>
+                                    <td>Cerro Huascata</td>
                                     <td>20/07/2020</td>
                                     <td>20/07/2022</td>
                                     <td>vecinal</td>
@@ -345,22 +371,22 @@
                                     <th scope="row">2</th>
                                     <td>281-2013</td>
                                     <td>Org. Alianza Lima y Soc</td>
-                                    <td>local</td>
-                                    <td>Chaclayo</td>
+                                    <td>Local</td>
+                                    <td>Miguel Grau 2 Etapa</td>
                                     <td>21/07/2020</td>
                                     <td>21/07/2022</td>
                                     <td>temática</td>
                                     <td>RESOLUCION-DNW-1423</td>
                                     <td>
-                                      <a th:href="@{/images/resolucion.pdf}" download="Resolución.pdf" class="d-flex justify-content-center">
+                                        <a th:href="@{/images/resolucion.pdf}" download="Resolución.pdf" class="d-flex justify-content-center">
                                             <img src="https://png.pngtree.com/element_our/md/20180620/md_5b29c1812e5f5.jpg" alt="" width="35"></a>
                                     </td>
                                 </tr> <tr>
                                     <th scope="row">3</th>
                                     <td>34-2016</td>
                                     <td>Org. Pikicha</td>
-                                    <td>local</td>
-                                    <td>Chaclayo</td>
+                                    <td>Local</td>
+                                    <td>Los Pinos</td>
                                     <td>22/07/2020</td>
                                     <td>22/07/2022</td>
                                     <td>municipal</td>
@@ -373,14 +399,14 @@
                                     <th scope="row">4</th>
                                     <td>58-2020</td>
                                     <td>Org. Comedor Municipal</td>
-                                    <td>local</td>
-                                    <td>Chaclayo</td>
+                                    <td>Local</td>
+                                    <td>Miguel Grau 2 Etapa</td>
                                     <td>23/07/2020</td>
                                     <td>23/07/2022</td>
                                     <td>municipal</td>
                                     <td>RESOLUCION-MEU-1425</td>
                                     <td>
-                                       <a th:href="@{/images/resolucion.pdf}" download="Resolución.pdf" class="d-flex justify-content-center">
+                                        <a th:href="@{/images/resolucion.pdf}" download="Resolución.pdf" class="d-flex justify-content-center">
                                             <img src="https://png.pngtree.com/element_our/md/20180620/md_5b29c1812e5f5.jpg" alt="" width="35"></a>
                                     </td>
                                 </tr>
